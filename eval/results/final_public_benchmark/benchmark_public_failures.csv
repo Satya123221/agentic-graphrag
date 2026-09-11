@@ -1,0 +1,354 @@
+pipeline,qid,qtype,predicted_answer,gold_answer,gold_doc_retrieved,retrieval_completeness,error,latency_sec
+rag,pub-001,aggregation,Insufficient evidence in the retrieved context.,5,True,0.0909,,322.79
+rag,pub-002,temporal,Insufficient evidence in the retrieved context.,Chen Ding,False,0.0,,289.75
+rag,pub-003,aggregation,Insufficient evidence in the retrieved context.,8,True,0.0588,,223.0
+rag,pub-004,superlative,Insufficient evidence in the retrieved context.,Athletics at the 2008 Summer Olympics – Men's marathon,True,0.0233,,261.14
+rag,pub-005,multi_hop,Miloslav Mečíř,Naim Süleymanoğlu,False,0.0,,237.12
+rag,pub-007,temporal,Sergey Bubka,Renaud Lavillenie,True,1.0,,253.21
+rag,pub-008,superlative,Insufficient evidence in the retrieved context.,Sailing at the 2000 Summer Olympics – Soling,False,0.0,,204.97
+rag,pub-010,aggregation,Insufficient evidence in the retrieved context.,4,False,0.0,,280.56
+rag,pub-011,multi_hop,Lee Seung-hoon,Martina Sáblíková,True,1.0,,410.58
+rag,pub-012,aggregation,Insufficient evidence in the retrieved context.,6,True,0.2857,,319.8
+rag,pub-013,temporal,Insufficient evidence in the retrieved context.,Allison Schmitt,False,0.0,,276.77
+rag,pub-014,multi_hop,Insufficient evidence in the retrieved context.,Carolina Marín,False,0.0,,262.6
+rag,pub-015,multi_hop,"The gold medal in the event held at London Velopark on 3 to 4 August at the 2012 Summer Olympics was won by Dani King, Laura Trott, and Joanna Rowsell representing Great Britain.",Dani KingLaura TrottJoanna Rowsell,True,1.0,,254.33
+rag,pub-016,temporal,Ole Einar Bjørndalen,Arnd Peiffer,False,0.0,,262.27
+rag,pub-017,multi_hop,Insufficient evidence in the retrieved context.,Yi Siling,False,0.0,,239.58
+rag,pub-018,temporal,Insufficient evidence in the retrieved context.,Kevin Jackson,False,0.0,,303.87
+rag,pub-019,aggregation,Insufficient evidence in the retrieved context.,3,True,0.125,,219.45
+rag,pub-020,aggregation,Insufficient evidence in the retrieved context.,4,True,0.1,,292.35
+rag,pub-021,superlative,Insufficient evidence in the retrieved context.,Alpine skiing at the 1988 Winter Olympics – Men's giant slalom,False,0.0,,281.08
+rag,pub-022,multi_hop,Wu Jingyu,Ayumi Tanimoto,False,0.0,,258.62
+rag,pub-023,multi_hop,Kevin Young,Hwang Young-Cho,True,1.0,,278.39
+rag,pub-024,aggregation,Insufficient evidence in the retrieved context.,3,False,0.0,,250.93
+rag,pub-026,temporal,Greg Van Avermaet,Jaroslav Kulhavý,False,0.0,,265.69
+rag,pub-027,aggregation,Insufficient evidence in the retrieved context.,4,True,0.1,,257.65
+rag,pub-028,multi_hop,Answer: Michael Phelps,Michael Phelps,False,0.0,,267.28
+rag,pub-029,lookup,41,28,True,1.0,,267.14
+rag,pub-030,multi_hop,Insufficient evidence in the retrieved context.,Emese Szász,False,0.0,,382.04
+rag,pub-031,multi_hop,Liu Chunhong,Dmitry Berestov,False,0.0,,253.48
+rag,pub-033,aggregation,Insufficient evidence in the retrieved context.,4,True,0.1429,,240.7
+rag,pub-034,lookup,20,23,False,0.0,,244.57
+rag,pub-035,lookup,Insufficient evidence in the retrieved context.,30,False,0.0,,231.07
+rag,pub-036,temporal,Hasanboy Dusmatov from Uzbekistan won the gold medal.,Zou Shiming,True,0.5,,212.91
+rag,pub-037,superlative,Insufficient evidence in the retrieved context.,Shooting at the 2008 Summer Olympics – Men's 50 metre rifle prone,True,0.1429,,229.77
+rag,pub-038,multi_hop,Audley Harrison,Pyrros Dimas,False,0.0,,215.34
+rag,pub-039,temporal,Insufficient evidence in the retrieved context.,Sandra Perković,False,0.0,,223.46
+rag,pub-041,multi_hop,Tony Yoka,Nino Schurter,False,0.0,,272.68
+rag,pub-042,lookup,Insufficient evidence in the retrieved context.,47,False,0.0,,261.6
+rag,pub-044,superlative,The men's épée event at the 2008 Summer Olympics had the highest number of competitors with 41 competitors.,Fencing at the 2008 Summer Olympics – Men's épée,True,0.2,,240.53
+rag,pub-045,aggregation,Insufficient evidence in the retrieved context.,20,True,0.0233,,240.0
+rag,pub-047,lookup,32,24,True,1.0,,252.16
+rag,pub-048,temporal,Hadi Saei,Servet Tazegül,True,0.5,,225.62
+rag,pub-049,temporal,Insufficient evidence in the retrieved context.,Martin Fourcade,False,0.0,,237.97
+rag,pub-050,multi_hop,Insufficient evidence in the retrieved context.,Lee Sang-hwa,False,0.0,,231.38
+rag,pub-051,aggregation,Insufficient evidence in the retrieved context.,6,False,0.0,,224.29
+rag,pub-052,lookup,Insufficient evidence in the retrieved context.,20,False,0.0,,271.14
+rag,pub-053,superlative,Insufficient evidence in the retrieved context.,Shooting at the 2016 Summer Olympics – Women's 10 metre air rifle,True,0.0714,,255.91
+rag,pub-054,lookup,26,24,True,1.0,,257.64
+rag,pub-055,temporal,Steven López,Sebastián Crismanich,True,0.5,,228.03
+rag,pub-056,temporal,Insufficient evidence in the retrieved context.,Yevgeny Dementyev,True,1.0,,232.3
+rag,pub-057,temporal,Insufficient evidence in the retrieved context.,Allyson Felix,False,0.0,,235.18
+rag,pub-058,aggregation,Insufficient evidence in the retrieved context.,5,False,0.0,,188.74
+rag,pub-059,temporal,Insufficient evidence in the retrieved context.,Laura Dahlmeier,False,0.0,,248.45
+rag,pub-060,multi_hop,Insufficient evidence in the retrieved context.,Yana Shemyakina,False,0.0,,227.23
+rag,pub-061,lookup,Insufficient evidence in the retrieved context.,34,False,0.0,,196.26
+rag,pub-062,temporal,Insufficient evidence in the retrieved context.,Tirunesh Dibaba,False,0.0,,236.22
+rag,pub-064,multi_hop,Szymon Ziółkowski,Gabriela Szabo,False,0.0,,211.15
+rag,pub-065,aggregation,Insufficient evidence in the retrieved context.,5,True,0.1818,,207.11
+rag,pub-066,superlative,Insufficient evidence in the retrieved context.,Weightlifting at the 1992 Summer Olympics – Men's 75 kg,False,0.0,,214.42
+rag,pub-067,multi_hop,Insufficient evidence in the retrieved context.,Rosannagh MacLennan,False,0.0,,187.34
+rag,pub-068,lookup,30,24,True,1.0,,202.41
+rag,pub-069,aggregation,Insufficient evidence in the retrieved context.,3,True,0.3,,270.48
+rag,pub-070,aggregation,Insufficient evidence in the retrieved context.,3,False,0.0,,213.7
+rag,pub-071,lookup,Insufficient evidence in the retrieved context.,24,False,0.0,,207.55
+rag,pub-072,temporal,Lee Sang-hwa from South Korea won the gold medal in the women's 500 metres speed skating event at the 2014 Winter Olympics.,Lee Sang-hwa,True,0.5,,223.75
+rag,pub-073,multi_hop,Insufficient evidence in the retrieved context.,Yang Ling,False,0.0,,174.84
+rag,pub-074,lookup,Insufficient evidence in the retrieved context.,17,False,0.0,,222.64
+rag,pub-075,lookup,Insufficient evidence in the retrieved context.,32,False,0.0,,229.35
+rag,pub-076,multi_hop,Kjetil André Aamodt,Julia Mancuso,False,0.0,,183.43
+rag,pub-077,multi_hop,"Kaillie Humphries of the United States won the gold medal in the women's monobob event held at Xiaohaituo Bobsleigh and Luge Track Beijing on 13, 14 February 2022.",Kaillie Humphries,True,1.0,,210.41
+rag,pub-078,aggregation,Insufficient evidence in the retrieved context.,7,False,0.0,,135.71
+rag,pub-079,multi_hop,Jan Ullrich,Leontien Zijlaard,False,0.0,,203.38
+rag,pub-080,lookup,48,17,True,1.0,,177.54
+rag,pub-081,multi_hop,Insufficient evidence in the retrieved context.,Guo Wenjun,False,0.0,,204.59
+rag,pub-082,aggregation,Insufficient evidence in the retrieved context.,12,True,0.0385,,167.05
+rag,pub-084,superlative,Insufficient evidence in the retrieved context.,Fencing at the 1992 Summer Olympics – Men's épée,False,0.0,,194.25
+rag,pub-085,superlative,Insufficient evidence in the retrieved context.,Sailing at the 2008 Summer Olympics – Men's 470,False,0.0,,154.66
+rag,pub-087,aggregation,Insufficient evidence in the retrieved context.,17,True,0.0789,,210.85
+rag,pub-088,superlative,The men's 15 kilometre freestyle pursuit in cross-country skiing at the 1992 Winter Olympics had the highest number of competitors with 102.,Alpine skiing at the 1992 Winter Olympics – Men's giant slalom,False,0.0,,259.79
+rag,pub-089,aggregation,Insufficient evidence in the retrieved context.,5,False,0.0,,238.39
+rag,pub-090,temporal,Ghasem Rezaei,Aslanbek Khushtov,True,0.5,,265.02
+rag,pub-091,lookup,Insufficient evidence in the retrieved context.,18,False,0.0,,368.14
+rag,pub-092,aggregation,Insufficient evidence in the retrieved context.,6,False,0.0,,219.89
+rag,pub-093,aggregation,Insufficient evidence in the retrieved context.,4,True,0.1111,,256.41
+rag,pub-094,temporal,Insufficient evidence in the retrieved context.,Oleg Kucherenko,False,0.0,,309.3
+rag,pub-095,multi_hop,Irving Saladino of Panama won the gold medal in the men's long jump event held at the Beijing Olympic Stadium on 16 August 2008.,Valerie Vili,False,0.0,,260.86
+rag,pub-096,multi_hop,Answer: Fazliddin Gaibnazarov,Fazliddin Gaibnazarov,True,1.0,,284.62
+rag,pub-097,temporal,Insufficient evidence in the retrieved context.,Yana Shemyakina,False,0.0,,289.97
+rag,pub-098,multi_hop,Audley Harrison,Bekzat Sattarkhanov,False,0.0,,265.21
+rag,pub-099,multi_hop,Insufficient evidence in the retrieved context.,Erik LesserDaniel BöhmArnd PeifferSimon Schempp,False,0.0,,285.15
+rag,pub-100,temporal,Insufficient evidence in the retrieved context.,Missy Franklin,False,0.0,,298.62
+graphrag,pub-001,aggregation,,5,False,0.0,"timeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)
+Traceback (most recent call last):
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 534, in _make_request
+    response = conn.getresponse()
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\connection.py"", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File ""C:\Users\patil\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py"", line 1478, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File ""C:\Users\patil\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py"", line 343, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\requests\adapters.py"", line 696, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 842, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\util\retry.py"", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\util\util.py"", line 39, in reraise
+    raise value
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\patil\agentic-graphrag\eval\run_public_final.py"", line 354, in run_one
+    return RUNNERS[pipeline](question)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File ""C:\Users\patil\agentic-graphrag\eval\run_public_final.py"", line 262, in run_graphrag
+    answer = ask_ollama(question, context) or INSUFFICIENT_EVIDENCE
+             ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\patil\agentic-graphrag\rag\pipeline.py"", line 65, in ask_ollama
+    response = requests.post(
+        f""{OLLAMA_BASE_URL}/api/generate"",
+        json=payload,
+        timeout=600,
+    )
+  File ""C:\Users\patil\agentic-graphrag\eval\run_public_final.py"", line 60, in _capturing_post
+    response = _ORIG_POST(*args, **kwargs)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)
+",605.86
+graphrag,pub-003,aggregation,Insufficient evidence in the retrieved context.,8,True,0.4706,,442.6
+graphrag,pub-004,superlative,Insufficient evidence in the retrieved context.,Athletics at the 2008 Summer Olympics – Men's marathon,True,0.186,,512.68
+graphrag,pub-008,superlative,Laser,Sailing at the 2000 Summer Olympics – Soling,True,1.0,,554.37
+graphrag,pub-010,aggregation,Insufficient evidence in the retrieved context.,4,True,0.7,,510.11
+graphrag,pub-012,aggregation,3,6,True,0.5714,,498.13
+graphrag,pub-014,multi_hop,Chen Long,Carolina Marín,True,1.0,,519.08
+graphrag,pub-015,multi_hop,Insufficient evidence in the retrieved context.,Dani KingLaura TrottJoanna Rowsell,True,1.0,,445.75
+graphrag,pub-016,temporal,,Arnd Peiffer,False,0.0,"timeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)
+Traceback (most recent call last):
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 534, in _make_request
+    response = conn.getresponse()
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\connection.py"", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File ""C:\Users\patil\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py"", line 1478, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File ""C:\Users\patil\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py"", line 343, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\requests\adapters.py"", line 696, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 842, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\util\retry.py"", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\util\util.py"", line 39, in reraise
+    raise value
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\patil\agentic-graphrag\eval\run_public_final.py"", line 354, in run_one
+    return RUNNERS[pipeline](question)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File ""C:\Users\patil\agentic-graphrag\eval\run_public_final.py"", line 262, in run_graphrag
+    answer = ask_ollama(question, context) or INSUFFICIENT_EVIDENCE
+             ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\patil\agentic-graphrag\rag\pipeline.py"", line 65, in ask_ollama
+    response = requests.post(
+        f""{OLLAMA_BASE_URL}/api/generate"",
+        json=payload,
+        timeout=600,
+    )
+  File ""C:\Users\patil\agentic-graphrag\eval\run_public_final.py"", line 60, in _capturing_post
+    response = _ORIG_POST(*args, **kwargs)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)
+",2235.78
+graphrag,pub-020,aggregation,,4,False,0.0,"timeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)
+Traceback (most recent call last):
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 534, in _make_request
+    response = conn.getresponse()
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\connection.py"", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File ""C:\Users\patil\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py"", line 1478, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File ""C:\Users\patil\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py"", line 343, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\requests\adapters.py"", line 696, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 842, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\util\retry.py"", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\patil\agentic-graphrag\.venv\Lib\site-packages\urllib3\util\util.py"", line 39, in reraise
+    raise value
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\patil\agentic-graphrag\eval\run_public_final.py"", line 354, in run_one
+    return RUNNERS[pipeline](question)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File ""C:\Users\patil\agentic-graphrag\eval\run_public_final.py"", line 262, in run_graphrag
+    answer = ask_ollama(question, context) or INSUFFICIENT_EVIDENCE
+             ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\patil\agentic-graphrag\rag\pipeline.py"", line 65, in ask_ollama
+    response = requests.post(
+        f""{OLLAMA_BASE_URL}/api/generate"",
+        json=payload,
+        timeout=600,
+    )
+  File ""C:\Users\patil\agentic-graphrag\eval\run_public_final.py"", line 60, in _capturing_post
+    response = _ORIG_POST(*args, **kwargs)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)
+",610.96
+graphrag,pub-021,superlative,"The Women's combined event at the 1988 Winter Olympics was held at Nakiska, with the following results:
+
+**Gold Medalist:**  
+- **Anita Wachter** (AUT) with a total time of **2:08.39** and a time difference of **+2.02**.
+
+**Silver Medalist:**  
+- **Brigitte Oertli** (SUI) with a total time of **2:08.77** and a time difference of **+2.40**.
+
+**Bronze Medalist:**  
+- **Maria Walliser** (SUI) with a total time of **2:08.92** and a time difference of **+2.55**.
+
+**Winning Points:**  
+- The winning points for the gold medal were **29.25**.
+
+**Key Notes:**  
+- The event took place on **February 20–21, 1988**.
+- The defending world champion in the combined event was **Erika Hess** of Switzerland, while **Brigitte Oertli** was the defending World Cup combined champion.
+- The competition involved **39 competitors** from **1",Alpine skiing at the 1988 Winter Olympics – Men's giant slalom,True,0.8,,412.7
+graphrag,pub-022,multi_hop,Insufficient evidence in the retrieved context.,Ayumi Tanimoto,False,0.0,,0.14
+graphrag,pub-024,aggregation,Insufficient evidence in the retrieved context.,3,True,1.0,,436.03
+graphrag,pub-027,aggregation,Insufficient evidence in the retrieved context.,4,True,0.8,,445.59
+graphrag,pub-033,aggregation,Insufficient evidence in the retrieved context.,4,True,0.5714,,416.06
+graphrag,pub-037,superlative,The Men's 10 metre air rifle event had the highest number of competitors with 51.,Shooting at the 2008 Summer Olympics – Men's 50 metre rifle prone,True,0.5714,,411.23
+graphrag,pub-038,multi_hop,Audley Harrison,Pyrros Dimas,True,1.0,,95.62
+graphrag,pub-042,lookup,"**Answer:**
+
+Kjetil André Aamodt won the **Men's Super-G** event at the **Albertville 1992 Winter Olympics**, held at **Val d'Isère, Face de Bellevarde**. He was the **Norwegian champion**, and Norway captured **three of the top four spots** in the competition, with **Jan Einar Thorsen** winning **bronze** and **Ole Kristian Furuseth** finishing **fourth**.
+
+In the **Men's Giant Slalom** event at the **2002 Winter Olympics** in **Park City**, **Stephan Eberharter** of **Austria** won gold, becoming the **oldest man to win an alpine event at the Olympics**. **Bode Miller** of the **United States** won silver, and **Lasse Kjus** of **Norway** won bronze. **Kjetil André Aamodt** of **Norway** finished **7th** in this event.
+
+In the **Men's Giant Slalom** event at the **2006 Winter Olympics** in **Sestriere**, **Benjamin Raich** of **Austria** won gold, **",47,True,1.0,,373.74
+graphrag,pub-044,superlative,Insufficient evidence in the retrieved context.,Fencing at the 2008 Summer Olympics – Men's épée,True,0.8,,394.35
+graphrag,pub-045,aggregation,3,20,True,0.186,,385.66
+graphrag,pub-051,aggregation,Insufficient evidence in the retrieved context.,6,True,0.5,,451.11
+graphrag,pub-053,superlative,Insufficient evidence in the retrieved context.,Shooting at the 2016 Summer Olympics – Women's 10 metre air rifle,True,0.5714,,429.4
+graphrag,pub-058,aggregation,3,5,True,0.6667,,476.81
+graphrag,pub-060,multi_hop,Mansur Isaev,Yana Shemyakina,False,0.0,,430.83
+graphrag,pub-065,aggregation,Insufficient evidence in the retrieved context.,5,True,0.7273,,425.67
+graphrag,pub-066,superlative,The Men's 75 kg event had the highest number of competitors with 34.,Weightlifting at the 1992 Summer Olympics – Men's 75 kg,True,0.8,,427.83
+graphrag,pub-069,aggregation,Insufficient evidence in the retrieved context.,3,True,0.8,,376.32
+graphrag,pub-070,aggregation,Answer: No new world or Olympic records were set during the 2010 Winter Olympics speed skating competitions.,3,True,0.8,,240.61
+graphrag,pub-077,multi_hop,Francesco Friedrich and Thorsten Margis,Kaillie Humphries,True,1.0,,183.69
+graphrag,pub-078,aggregation,Insufficient evidence in the retrieved context.,7,True,0.5,,429.76
+graphrag,pub-082,aggregation,"The **women's 100 metre freestyle** event at the **1996 Summer Olympics** took place on **20 July 1996** at the **Georgia Tech Aquatic Center** in Atlanta, United States. 
+
+### Key Details:
+- **Gold Medalist**: **Le Jingyi** (China) with a time of **54.50 seconds**.
+- **Silver Medalist**: **Sandra Völker** (Germany) with a time of **55.55 seconds**.
+- **Bronze Medalist**: **Angel Martino** (United States) with a time of **55.44 seconds**.
+- **Venue**: Georgia Tech Aquatic Center.
+- **Date**: 20 July 1996.
+- **Competitors**: 48 swimmers from 44 nations.
+- **Winning Time**: **54.50 seconds** (a new Olympic record).
+
+### Notable Information:
+- **Le Jingyi** won the gold medal, marking China's first victory in the women's 100 metre freestyle at the Olympics.
+- **Sandra Völker** and **Angel Martino** secured the silver and bronze",12,True,0.3077,,340.93
+graphrag,pub-084,superlative,The men's team épée event had the highest number of competitors with 60.,Fencing at the 1992 Summer Olympics – Men's épée,True,1.0,,411.25
+graphrag,pub-085,superlative,Men's 470,Sailing at the 2008 Summer Olympics – Men's 470,True,0.7273,,411.47
+graphrag,pub-087,aggregation,Insufficient evidence in the retrieved context.,17,True,0.2105,,374.22
+graphrag,pub-088,superlative,"**Answer:**
+
+The Women's combined competition of the 1992 Winter Olympics in Albertville was held at Meribel from February 12–13, 1992. It featured 40 competitors from 18 nations. The event consisted of a downhill and a slalom race, with the combined results determining the final standings.
+
+**Winning Points:**
+- **Gold:** Petra Kronberger (AUT) with a total time of **1:09.60** and **2.55** winning points.
+- **Silver:** Anita Wachter (AUT) with a total time of **1:09.51** and **19.39** winning points.
+- **Bronze:** Florence Masnada (FRA) with a total time of **1:10.01** and **21.38** winning points.
+
+**Key Competitors:**
+- **Chantal Bournissen (SUI)**, the defending world champion, finished 4th with a total time of **1:10.69** and **24.98** winning points.
+- **Anne Berge (SUI)** finished 5th with a total",Alpine skiing at the 1992 Winter Olympics – Men's giant slalom,True,0.8,,434.82
+graphrag,pub-089,aggregation,Insufficient evidence in the retrieved context.,5,True,0.6667,,577.22
+graphrag,pub-092,aggregation,Insufficient evidence in the retrieved context.,6,True,0.6154,,539.38
+graphrag,pub-093,aggregation,Insufficient evidence in the retrieved context.,4,True,0.8889,,570.89
+graphrag,pub-095,multi_hop,Pamela Jelimo,Valerie Vili,True,1.0,,480.43
+graphrag,pub-096,multi_hop,Shakhobidin Zoirov,Fazliddin Gaibnazarov,True,1.0,,270.87
+agentic,pub-022,multi_hop,Insufficient evidence in the retrieved context.,Ayumi Tanimoto,False,0.0,,0.06
+agentic,pub-038,multi_hop,Audley Harrison,Pyrros Dimas,True,1.0,,0.87
+agentic,pub-051,aggregation,Insufficient evidence in the retrieved context.,6,True,1.0,,3.28
+agentic,pub-055,temporal,Carlo Molfetta,Sebastián Crismanich,False,0.0,,0.05
+agentic,pub-060,multi_hop,Mansur Isaev,Yana Shemyakina,True,1.0,,1.34
+agentic,pub-075,lookup,,32,False,0.0,"timeout: HTTP Error 408: Timeout
+Traceback (most recent call last):
+  File ""C:\Users\patil\agentic-graphrag\eval\run_public_final.py"", line 354, in run_one
+    return RUNNERS[pipeline](question)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File ""C:\Users\patil\agentic-graphrag\eval\run_public_final.py"", line 291, in run_agentic
+    raw = investigate(question)
+  File ""C:\Users\patil\agentic-graphrag\agent\orchestrator.py"", line 1556, in investigate
+    result = call_tool(decision[""tool""], **decision[""args""])
+  File ""C:\Users\patil\agentic-graphrag\agent\tools.py"", line 381, in call_tool
+    return fn(**kwargs)
+urllib.error.HTTPError: HTTP Error 408: Timeout
+",1232.99
+agentic,pub-095,multi_hop,Pamela Jelimo,Valerie Vili,True,1.0,,38.38
+agentic,pub-098,multi_hop,Isabel Fernández,Bekzat Sattarkhanov,True,1.0,,4.58

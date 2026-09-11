@@ -1,0 +1,23 @@
+USE GRAPH AgenticGraphRAG
+
+# Read-only GraphRAG traversals for TigerGraph 4.2.
+# The Python retriever executes these paths over REST and does not
+# CREATE/INSTALL queries, so the live graph catalog stays unchanged.
+
+# Event → OlympicGames
+#   SELECT g FROM Event:e -(PART_OF)- OlympicGames:g;
+# Event → Sport
+#   SELECT s FROM Event:e -(IN_SPORT)- Sport:s;
+# Event → Athlete
+#   SELECT a FROM Event:e -(WON_BY)- Athlete:a;
+# Event → Venue
+#   SELECT v FROM Event:e -(HELD_AT)- Venue:v;
+# Venue → Event (reverse HELD_AT)
+#   SELECT e FROM Venue:v -(<HELD_AT)- Event:e;
+# Athlete → Country
+#   SELECT c FROM Athlete:a -(REPRESENTS)- Country:c;
+# Document → Event
+#   SELECT e FROM Document:d -(DESCRIBES)- Event:e;
+# Reverse games/sport membership
+#   SELECT e FROM OlympicGames:g -(<PART_OF)- Event:e;
+#   SELECT e FROM Sport:s -(<IN_SPORT)- Event:e;

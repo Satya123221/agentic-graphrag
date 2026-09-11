@@ -1,0 +1,7 @@
+USE GRAPH AgenticGraphRAG
+
+CREATE LOADING JOB load_represents FOR GRAPH AgenticGraphRAG {
+  DEFINE FILENAME f;
+  LOAD f TO EDGE REPRESENTS VALUES($0, $1)
+  USING SEPARATOR="\t", HEADER="true", EOL="\n";
+}

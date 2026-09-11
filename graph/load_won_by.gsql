@@ -1,0 +1,7 @@
+USE GRAPH AgenticGraphRAG
+
+CREATE LOADING JOB load_won_by FOR GRAPH AgenticGraphRAG {
+  DEFINE FILENAME f;
+  LOAD f TO EDGE WON_BY VALUES($0, $1)
+  USING SEPARATOR="\t", HEADER="true", EOL="\n";
+}

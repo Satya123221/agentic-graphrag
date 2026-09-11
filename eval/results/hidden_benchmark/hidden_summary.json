@@ -1,0 +1,84 @@
+{
+  "n_questions": 50,
+  "n_records": 150,
+  "expected_records": 150,
+  "records_per_pipeline": {
+    "rag": 50,
+    "graphrag": 50,
+    "agentic": 50
+  },
+  "n_success": 150,
+  "n_failed": 0,
+  "n_timeouts": 0,
+  "qtype_counts": {
+    "multi_hop": 10,
+    "lookup": 7,
+    "aggregation": 15,
+    "superlative": 10,
+    "temporal": 8
+  },
+  "by_pipeline": {
+    "rag": {
+      "n": 50,
+      "n_success": 50,
+      "n_failed": 0,
+      "n_timeouts": 0,
+      "avg_latency_seconds": 194.48,
+      "median_latency_seconds": 192.34,
+      "min_latency_seconds": 133.06,
+      "max_latency_seconds": 289.5,
+      "n_with_ollama_token_metadata": 50,
+      "avg_llm_prompt_tokens": 1918.8,
+      "avg_llm_output_tokens": 9.9,
+      "avg_llm_total_tokens": 1928.8
+    },
+    "graphrag": {
+      "n": 50,
+      "n_success": 50,
+      "n_failed": 0,
+      "n_timeouts": 0,
+      "avg_latency_seconds": 303.64,
+      "median_latency_seconds": 334.15,
+      "min_latency_seconds": 0.07,
+      "max_latency_seconds": 492.26,
+      "n_with_ollama_token_metadata": 48,
+      "avg_llm_prompt_tokens": 2928.5,
+      "avg_llm_output_tokens": 32.3,
+      "avg_llm_total_tokens": 2960.8
+    },
+    "agentic": {
+      "n": 50,
+      "n_success": 50,
+      "n_failed": 0,
+      "n_timeouts": 0,
+      "avg_latency_seconds": 4.9,
+      "median_latency_seconds": 0.43,
+      "min_latency_seconds": 0.03,
+      "max_latency_seconds": 57.61,
+      "n_with_ollama_token_metadata": 5,
+      "avg_llm_prompt_tokens": 486.2,
+      "avg_llm_output_tokens": 28.0,
+      "avg_llm_total_tokens": 514.2,
+      "avg_agent_steps": 8.58,
+      "median_agent_steps": 7.0,
+      "min_agent_steps": 2,
+      "max_agent_steps": 44,
+      "avg_tool_calls": 8.58,
+      "n_with_trace": 50
+    }
+  },
+  "latency_seconds": {
+    "avg": 167.67,
+    "median": 181.25
+  },
+  "agentic_steps": {
+    "avg": 8.58,
+    "median": 7.0,
+    "n_with_trace": 50
+  },
+  "ollama_usage": {
+    "n_with_token_metadata": 103,
+    "avg_llm_total_tokens": 2341.0
+  },
+  "complete": true
+}

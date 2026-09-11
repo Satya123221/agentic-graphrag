@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agentic GraphRAG</title>
+  <style>
+    :root {
+      --bg: #0e141b;
+      --header: #121a22;
+      --panel: #17212b;
+      --user: #1d3a4d;
+      --assistant: #1a2430;
+      --line: #2c3948;
+      --text: #e8eef4;
+      --muted: #9aa8b7;
+      --accent: #6fbf8b;
+      --accent-dark: #102016;
+      --warn: #e0b567;
+      --fail: #d07a7a;
+      --chip: #243040;
+      --composer: #121a22;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    .app {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      min-height: 100dvh;
+    }
+    header.app-header {
+      flex: 0 0 auto;
+      background: var(--header);
+      border-bottom: 1px solid var(--line);
+      padding: 14px 20px;
+    }
+    .header-row {
+      max-width: 880px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    h1 {
+      margin: 0 0 4px;
+      font-size: 1.25rem;
+      letter-spacing: .01em;
+    }
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: .92rem;
+      max-width: 36rem;
+    }
+    .local-status {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+      white-space: nowrap;
+      font-size: .8rem;
+    }
+    .local-status .name { font-weight: 700; color: var(--accent); }
+    .local-status .place { color: var(--muted); }
+    .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .chat {
+      flex: 1 1 auto;
+      overflow-y: auto;
+      padding: 20px 16px 12px;
+    }
+    .chat-inner { max-width: 880px; margin: 0 auto; }
+    .welcome {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px 22px 18px;
+      margin-bottom: 8px;
+    }
+    .welcome h2 {
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+    }
+    .welcome p { margin: 0 0 14px; color: var(--muted); }
+    .examples { display: grid; gap: 8px; }
+    .examples button {
+      text-align: left;
+      background: #121920;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font: inherit;
+      cursor: pointer;
+    }
+    .examples button:hover { border-color: var(--accent); }
+    .msg {
+      display: flex;
+      margin: 12px 0;
+    }
+    .msg.user { justify-content: flex-end; }
+    .msg.assistant { justify-content: flex-start; }
+    .bubble {
+      max-width: min(100%, 680px);
+      border-radius: 14px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+    }
+    .msg.user .bubble {
+      background: var(--user);
+      border-color: #2a4d63;
+    }
+    .msg.assistant .bubble {
+      background: var(--assistant);
+    }
+    .who {
+      font-size: .72rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+    .answer {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 0 0 10px;
+    }
+    .answer.insufficient { color: var(--fail); }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0 6px;
+    }
+    .pill {
+      background: var(--chip);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: .8rem;
+      color: var(--text);
+    }
+    .pill span { color: var(--muted); }
+    .chip {
+      display: inline-block;
+      background: var(--chip);
+      border-radius: 999px;
+      padding: 2px 8px;
+      margin: 2px 4px 2px 0;
+      font-size: .8rem;
+    }
+    details {
+      border-top: 1px solid var(--line);
+      margin-top: 10px;
+      padding-top: 8px;
+    }
+    summary {
+      cursor: pointer;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: .9rem;
+    }
+    .step {
+      border-top: 1px solid var(--line);
+      padding: 10px 0;
+    }
+    .step:first-of-type { border-top: 0; padding-top: 8px; }
+    .muted { color: var(--muted); }
+    .error-text { color: var(--fail); margin: 0; }
+    a { color: #8ec5ff; }
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: #121920;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: .85rem;
+      margin: 6px 0 0;
+    }
+    .evidence-item { margin: 10px 0; }
+    .doc-id { color: var(--muted); font-size: .8rem; }
+    .composer {
+      flex: 0 0 auto;
+      background: var(--composer);
+      border-top: 1px solid var(--line);
+      padding: 12px 16px 16px;
+    }
+    .composer-inner { max-width: 880px; margin: 0 auto; }
+    textarea {
+      width: 100%;
+      min-height: 72px;
+      max-height: 180px;
+      resize: vertical;
+      background: #0e141b;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      font: inherit;
+    }
+    textarea:focus { outline: 2px solid #3d6a52; border-color: var(--accent); }
+    .composer-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+    button.primary {
+      background: var(--accent);
+      color: var(--accent-dark);
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 18px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button.secondary {
+      background: var(--chip);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:disabled { opacity: .55; cursor: wait; }
+    .hint { color: var(--fail); font-size: .85rem; min-height: 1.2em; }
+    .loading { color: var(--warn); }
+    .compare-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .pipeline-card {
+      background: #121920;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .pipeline-card h3 { margin: 0 0 8px; font-size: .95rem; }
+    @media (max-width: 800px) {
+      .compare-grid { grid-template-columns: 1fr; }
+      .header-row { flex-direction: column; align-items: flex-start; }
+      .local-status { align-items: flex-start; }
+      h1 { font-size: 1.15rem; }
+      .bubble { max-width: 100%; }
+      .examples { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="header-row">
+        <div>
+          <h1>Agentic GraphRAG</h1>
+          <p class="sub">Ask complex questions. The agent investigates using graph, documents, and evidence.</p>
+        </div>
+        <div class="local-status" aria-label="System status">
+          <div class="name"><span class="dot"></span>Agentic GraphRAG</div>
+          <div class="place">Local</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="chat" id="chat">
+      <div class="chat-inner">
+        <div id="welcome" class="welcome">
+          <h2>Investigate an Olympic question</h2>
+          <p>This chatbot uses the local Agentic GraphRAG system. It searches the graph, retrieves corpus evidence, and returns an answer with a visible investigation trace.</p>
+          <div class="examples">
+            <button type="button" data-q="Who won gold in the women's 57 kg judo event at the 2016 Summer Olympics?">Who won gold in the women's 57 kg judo event at the 2016 Summer Olympics?</button>
+            <button type="button" data-q="How many shooting events at the 2004 Summer Olympics had more than 37 competitors?">How many shooting events at the 2004 Summer Olympics had more than 37 competitors?</button>
+            <button type="button" data-q="Which event had the highest number of competitors at the 2004 Summer Olympics?">Which event had the highest number of competitors at the 2004 Summer Olympics?</button>
+          </div>
+        </div>
+        <div id="messages"></div>
+      </div>
+    </div>
+
+    <form class="composer" id="composer">
+      <div class="composer-inner">
+        <label class="muted" for="question">Question</label>
+        <textarea id="question" placeholder="Ask a question about Olympic events, venues, medals, or counts…" rows="3"></textarea>
+        <div class="composer-row">
+          <button type="submit" class="primary" id="ask">Ask</button>
+          <button type="button" class="secondary" id="compare">Compare RAG vs GraphRAG vs Agentic</button>
+          <span id="status" class="muted"></span>
+        </div>
+        <div id="hint" class="hint"></div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const welcome = document.getElementById("welcome");
+    const messages = document.getElementById("messages");
+    const chat = document.getElementById("chat");
+    const askBtn = document.getElementById("ask");
+    const compareBtn = document.getElementById("compare");
+    const questionEl = document.getElementById("question");
+    const status = document.getElementById("status");
+    const hint = document.getElementById("hint");
+    const composer = document.getElementById("composer");
+
+    function esc(value) {
+      return String(value ?? "").replace(/[&<>"']/g, ch => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+      }[ch]));
+    }
+
+    function chips(items) {
+      if (!items || !items.length) return '<span class="muted">none</span>';
+      return items.map(item => `<span class="chip">${esc(item)}</span>`).join("");
+    }
+
+    function scrollChat() {
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    function hideWelcome() {
+      welcome.hidden = true;
+    }
+
+    function addUserMessage(text) {
+      hideWelcome();
+      const wrap = document.createElement("div");
+      wrap.className = "msg user";
+      wrap.innerHTML = `<div class="bubble"><div class="who">You</div><div>${esc(text)}</div></div>`;
+      messages.appendChild(wrap);
+      scrollChat();
+    }
+
+    function addAssistantShell() {
+      hideWelcome();
+      const wrap = document.createElement("div");
+      wrap.className = "msg assistant";
+      wrap.innerHTML = `<div class="bubble"><div class="who">Agentic GraphRAG</div><p class="loading">Investigating…</p></div>`;
+      messages.appendChild(wrap);
+      scrollChat();
+      return wrap.querySelector(".bubble");
+    }
+
+    function setBusy(busy) {
+      askBtn.disabled = busy;
+      compareBtn.disabled = busy;
+      questionEl.disabled = busy;
+    }
+
+    function friendlyError(err) {
+      const raw = String((err && err.message) || err || "");
+      if (!raw.trim()) return "The investigation could not be completed. Please try again.";
+      if (/failed to fetch|networkerror|load failed/i.test(raw)) {
+        return "Could not reach the local Agentic GraphRAG service. Check that the app is running and try again.";
+      }
+      if (/400|required/i.test(raw)) return "Please enter a question before asking.";
+      if (/500|internal/i.test(raw)) return "The local agent hit an unexpected error. Please try another question.";
+      return "The investigation could not be completed. Please try again.";
+    }
+
+    function statusLabel(data) {
+      if (data.ok === false) return "Failed";
+      if (data.answer === "Insufficient evidence") return "Insufficient evidence";
+      const stop = data.stopping_status || "";
+      if (stop === "answered") return "Answered";
+      if (stop) return stop.replace(/_/g, " ");
+      return "Complete";
+    }
+
+    function traceHtml(trace) {
+      return (trace || []).map(step => {
+        const summary = step.result_summary || {};
+        const parts = [];
+        if (summary.ok != null) parts.push("ok=" + summary.ok);
+        if (summary.n_entities != null) parts.push("entities=" + summary.n_entities);
+        if (summary.n_events != null) parts.push("events=" + summary.n_events);
+        if (summary.n_documents != null) parts.push("docs=" + summary.n_documents);
+        if (summary.n_evidence != null) parts.push("evidence=" + summary.n_evidence);
+        if (summary.error) parts.push("error=" + summary.error);
+        return `<div class="step">
+          <div><strong>Step ${esc(step.step)}</strong> · <span class="chip">${esc(step.action)}</span></div>
+          <div class="muted">${esc(parts.join(" · ") || "no result summary")}</div>
+        </div>`;
+      }).join("") || '<p class="muted">No steps recorded.</p>';
+    }
+
+    function evidenceHtml(data) {
+      const docs = (data.evidence || []).map(item => {
+        const link = item.url
+          ? `<div><a href="${esc(item.url)}" target="_blank" rel="noopener">source</a></div>`
+          : "";
+        return `<div class="evidence-item">
+          <div class="doc-id">${esc(item.doc_id || "")}</div>
+          <div><strong>${esc(item.title || "")}</strong></div>
+          ${link}
+          <pre>${esc(item.text || "")}</pre>
+        </div>`;
+      }).join("") || '<p class="muted">No corpus evidence collected.</p>';
+      const entities = (data.entities || []).map(item =>
+        `<span class="chip">${esc(item.type)}: ${esc(item.name || item.id)}</span>`
+      ).join("") || '<span class="muted">none</span>';
+      const paths = (data.graph_paths || []).map(item =>
+        `<div class="muted">${esc(item.path)} · ${esc(item.from_id)} → ${esc(item.to_id)}</div>`
+      ).join("") || '<p class="muted">No graph paths recorded.</p>';
+      return `${docs}
+        <p class="muted" style="margin-top:12px">Entities</p>
+        <div>${entities}</div>
+        <p class="muted" style="margin-top:12px">Graph paths</p>
+        ${paths}`;
+    }
+
+    function renderAsk(data) {
+      const insufficient = data.answer === "Insufficient evidence";
+      const routeLabel = data.route_label || "Agentic GraphRAG";
+      const showTrace = (data.route || "agentic_graphrag") === "agentic_graphrag";
+      return `
+        <div class="who">${esc(routeLabel)}</div>
+        <div class="answer ${insufficient ? "insufficient" : ""}">${esc(data.answer || "Insufficient evidence")}</div>
+        <div class="meta-row">
+          <div class="pill"><span>Route</span> ${esc(routeLabel)}</div>
+          <div class="pill"><span>Status</span> ${esc(statusLabel(data))}</div>
+          <div class="pill"><span>Steps</span> ${esc(data.steps)}</div>
+          <div class="pill"><span>Tools</span> ${esc((data.tools_used || []).join(", ") || "none")}</div>
+        </div>
+        <p class="muted">${esc(data.stopping_reason || "")}</p>
+        ${showTrace ? `<details>
+          <summary>Investigation Trace</summary>
+          ${traceHtml(data.trace)}
+        </details>
+        <details>
+          <summary>Evidence</summary>
+          ${evidenceHtml(data)}
+        </details>` : ""}
+      `;
+    }
+
+    function renderCompare(data) {
+      const cmp = data.comparison || {};
+      const card = (title, pipe) => {
+        const row = pipe || {};
+        if (row.ok === false) {
+          return `<div class="pipeline-card">
+            <h3>${esc(title)}</h3>
+            <div class="answer insufficient">Pipeline error</div>
+            <p class="error-text">${esc(row.error || "The pipeline could not be completed.")}</p>
+            <p class="muted">${esc(row.latency_sec)}s</p>
+          </div>`;
+        }
+        const insufficient = row.answer === "Insufficient evidence";
+        return `<div class="pipeline-card">
+          <h3>${esc(title)}</h3>
+          <div class="answer ${insufficient ? "insufficient" : ""}">${esc(row.answer || "Insufficient evidence")}</div>
+          <p class="muted">${esc(row.latency_sec)}s</p>
+        </div>`;
+      };
+      return `
+        <div class="who">Agentic GraphRAG</div>
+        <p class="muted">Side-by-side comparison using the live pipelines. Hidden/public benchmark scores are not used.</p>
+        <div class="compare-grid">
+          ${card("RAG", data.rag)}
+          ${card("GraphRAG", data.graphrag)}
+          ${card("Agentic GraphRAG", data.agentic)}
+        </div>
+        <div class="meta-row">
+          <div class="pill"><span>Agree</span> ${esc((cmp.agreeing_pipelines || []).join(", ") || "none")}</div>
+          <div class="pill"><span>Multiple tools</span> ${cmp.agentic_used_multiple_tools ? "yes" : "no"}</div>
+          <div class="pill"><span>Fastest</span> ${esc(cmp.fastest || "n/a")}</div>
+        </div>
+        <details>
+          <summary>Investigation Trace</summary>
+          ${traceHtml((data.agentic || {}).trace)}
+        </details>
+        <details>
+          <summary>Evidence</summary>
+          ${evidenceHtml(data.agentic || {})}
+        </details>
+      `;
+    }
+
+    async function postJson(url, question) {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question }),
+      });
+      let data = {};
+      try { data = await response.json(); } catch (_) { data = {}; }
+      if (!response.ok) {
+        const err = new Error("request failed");
+        err.status = response.status;
+        throw err;
+      }
+      return data;
+    }
+
+    async function run(url, question, renderer) {
+      hint.textContent = "";
+      if (!question) {
+        hint.textContent = "Enter a question to investigate.";
+        questionEl.focus();
+        return;
+      }
+      addUserMessage(question);
+      questionEl.value = "";
+      const bubble = addAssistantShell();
+      setBusy(true);
+      status.textContent = url === "/api/compare" ? "Comparing pipelines…" : "Investigating…";
+      try {
+        const data = await postJson(url, question);
+        bubble.innerHTML = renderer(data);
+        status.textContent = "";
+      } catch (err) {
+        bubble.innerHTML = `<div class="who">Agentic GraphRAG</div><p class="error-text">${esc(friendlyError(err))}</p>`;
+        status.textContent = "";
+      } finally {
+        setBusy(false);
+        scrollChat();
+        questionEl.focus();
+      }
+    }
+
+    composer.addEventListener("submit", event => {
+      event.preventDefault();
+      run("/api/ask", questionEl.value.trim(), renderAsk);
+    });
+    compareBtn.addEventListener("click", () => {
+      run("/api/compare", questionEl.value.trim(), renderCompare);
+    });
+    questionEl.addEventListener("keydown", event => {
+      if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault();
+        run("/api/ask", questionEl.value.trim(), renderAsk);
+      }
+    });
+    document.querySelectorAll(".examples button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        questionEl.value = btn.getAttribute("data-q");
+        questionEl.focus();
+      });
+    });
+  </script>
+</body>
+</html>

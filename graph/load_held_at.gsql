@@ -1,0 +1,7 @@
+USE GRAPH AgenticGraphRAG
+
+CREATE LOADING JOB load_held_at FOR GRAPH AgenticGraphRAG {
+  DEFINE FILENAME f;
+  LOAD f TO EDGE HELD_AT VALUES($0, $1)
+  USING SEPARATOR="\t", HEADER="false", EOL="\n";
+}

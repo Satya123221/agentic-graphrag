@@ -1,0 +1,152 @@
+%% TigerGraph Agentic GraphRAG Hackathon — architecture
+%% Drawn from the repository. Dashed nodes are not live capabilities.
+
+flowchart TB
+  classDef user fill:#1b2838,stroke:#6fbf8b,color:#e8eef4,stroke-width:1px
+  classDef impl fill:#17212b,stroke:#6fbf8b,color:#e8eef4
+  classDef route fill:#1d3a4d,stroke:#6fbf8b,color:#e8eef4
+  classDef graph fill:#102016,stroke:#6fbf8b,color:#e8eef4
+  classDef eval fill:#243040,stroke:#9aa8b7,color:#e8eef4
+  classDef optional fill:#2a2220,stroke:#e0b567,color:#e0b567,stroke-dasharray: 5 4
+  classDef stop fill:#3a2424,stroke:#d07a7a,color:#e8eef4
+
+  subgraph LIVE["Live chatbot  —  python -m backend  —  127.0.0.1:8010"]
+    U["User"]
+    FE["Chatbot / Frontend<br/>frontend/index.html"]
+    API["FastAPI Backend<br/>backend/app.py"]
+
+    U --> FE
+    FE -->|"POST /api/ask"| API
+    FE -->|"POST /api/compare<br/>bypasses router"| CMP["Compare adapter<br/>RAG + GraphRAG + Agentic"]
+  end
+
+  subgraph ROUTER["Question Router  —  backend/router.py  —  deterministic, no Ollama classify"]
+    R["classify question"]
+    C["Calculation<br/>restricted Python AST"]
+    G["General LLM<br/>Ollama qwen3:8b<br/>no Olympic retrieval"]
+    W["Current/Web path<br/>fixed unsupported message"]
+    A["Agentic GraphRAG"]
+    R --> C
+    R --> G
+    R --> W
+    R --> A
+  end
+
+  API --> R
+
+  subgraph AGENT["Agentic investigation  —  agent/orchestrator.py"]
+    ORCH["Agent Orchestrator<br/>investigate"]
+    ST["Investigation State<br/>entities, evidence,<br/>documents, graph paths"]
+    PLAN["Dynamic tool selection<br/>inspect gaps → propose → choose ONE tool<br/>not a fixed retrieval sequence"]
+    T1["search_entities"]
+    T2["search_events"]
+    T3["traverse_graph"]
+    T4["retrieve_documents"]
+    T5["lookup_evidence"]
+    EV["Evidence evaluation<br/>evidence_is_sufficient / extract_answer"]
+    OUT["Final answer + investigation trace"]
+    IE["Insufficient evidence<br/>when graph/corpus cannot support the answer"]
+
+    A --> ORCH
+    ORCH --> ST
+    ST --> PLAN
+    PLAN --> T1
+    PLAN --> T2
+    PLAN --> T3
+    PLAN --> T4
+    PLAN --> T5
+    T1 --> ST
+    T2 --> ST
+    T3 --> ST
+    T4 --> ST
+    T5 --> ST
+    ST --> EV
+    EV -->|"supported"| OUT
+    EV -->|"unsupported"| IE
+  end
+
+  subgraph DATA["Read-only data plane"]
+    TG["TigerGraph  AgenticGraphRAG<br/>127.0.0.1:14240/restpp"]
+    V1["Event"]
+    V2["Athlete"]
+    V3["Sport"]
+    V4["Venue"]
+    V5["Country"]
+    V6["OlympicGames"]
+    V7["Document"]
+    CORP["Olympic corpus.jsonl<br/>lookup by document / event id"]
+    TFIDF["TF-IDF index<br/>RAG baseline only"]
+    OLL["Local Ollama qwen3:8b<br/>localhost:11434"]
+
+    TG --- V1
+    TG --- V2
+    TG --- V3
+    TG --- V4
+    TG --- V5
+    TG --- V6
+    TG --- V7
+  end
+
+  T1 --> TG
+  T2 --> TG
+  T3 --> TG
+  T4 --> CORP
+  T5 --> CORP
+  T4 -.-> TG
+  G --> OLL
+  PLAN -.->|"planner fallback only"| OLL
+
+  subgraph EDGES["Graph relationships"]
+    E1["Document --DESCRIBES--> Event"]
+    E2["Event --PART_OF--> OlympicGames"]
+    E3["Event --IN_SPORT--> Sport"]
+    E4["Event --HELD_AT--> Venue"]
+    E5["Event --WON_BY--> Athlete"]
+    E6["Athlete --REPRESENTS--> Country"]
+    E7["Venue reverse HELD_AT Event"]
+  end
+
+  subgraph COMPARE["Live compare  —  same three pipelines, no router"]
+    RAG["RAG<br/>TF-IDF chunks → Ollama"]
+    GR["GraphRAG<br/>TigerGraph match → corpus → Ollama"]
+    AG2["Agentic GraphRAG<br/>investigate"]
+    CMP --> RAG
+    CMP --> GR
+    CMP --> AG2
+    RAG --> TFIDF
+    RAG --> OLL
+    GR --> TG
+    GR --> CORP
+    GR --> OLL
+    AG2 --> ORCH
+  end
+
+  WEBX["Web search client<br/>NOT IMPLEMENTED"]
+  W -.-> WEBX
+
+  subgraph BENCH["Separate benchmark path  —  does not use the chatbot router"]
+    PQ["Public eval  100 questions"]
+    HQ["Hidden eval  50 questions"]
+    RUN["eval/run_public_final.py<br/>eval/run_hidden.py"]
+    B1["RAG"]
+    B2["GraphRAG"]
+    B3["Agentic GraphRAG"]
+    MET["Metrics / frozen results<br/>eval/results/"]
+    DASH["Dashboard  :8008<br/>read-only, does not rerun"]
+
+    PQ --> RUN
+    HQ --> RUN
+    RUN --> B1
+    RUN --> B2
+    RUN --> B3
+    B1 --> MET
+    B2 --> MET
+    B3 --> MET
+    MET --> DASH
+  end
+
+  class U,FE,API user
+  class R,C,G,W,A,ORCH,ST,PLAN,T1,T2,T3,T4,T5,EV,OUT,CMP,RAG,GR,AG2,TG,V1,V2,V3,V4,V5,V6,V7,CORP,TFIDF,OLL,E1,E2,E3,E4,E5,E6,E7 impl
+  class PQ,HQ,RUN,B1,B2,B3,MET,DASH eval
+  class WEBX optional
+  class IE stop

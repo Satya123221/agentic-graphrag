@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Official Public Benchmark and Hidden Benchmark dashboard</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --panel: #1a222c;
+      --line: #2c3948;
+      --text: #e8eef4;
+      --muted: #9aa8b7;
+      --rag: #c9846a;
+      --graph: #6ea4d4;
+      --agent: #6fbf8b;
+      --warn: #e0b567;
+      --fail: #d07a7a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    header {
+      padding: 28px 32px 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    h1 { margin: 0 0 8px; font-size: 1.6rem; }
+    h2 { margin: 0 0 12px; font-size: 1.15rem; }
+    .sub { color: var(--muted); max-width: 70rem; }
+    main { padding: 20px 32px 48px; display: grid; gap: 20px; }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+    th { color: var(--muted); font-weight: 600; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; }
+    .bar-wrap { height: 8px; background: #243040; border-radius: 99px; overflow: hidden; min-width: 80px; }
+    .bar { height: 100%; border-radius: 99px; }
+    .rag { color: var(--rag); }
+    .graph { color: var(--graph); }
+    .agent { color: var(--agent); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+    .card {
+      background: #121920;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .card .label { color: var(--muted); font-size: 0.8rem; }
+    .card .value { font-size: 1.4rem; font-weight: 700; margin-top: 4px; }
+    .warn {
+      background: #2a2416;
+      border: 1px solid #5c4a22;
+      color: var(--warn);
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin: 10px 0 0;
+      font-size: 0.9rem;
+    }
+    .note { color: var(--muted); font-size: 0.88rem; margin-top: 10px; }
+    .qid { font-family: ui-monospace, Consolas, monospace; font-size: 0.85rem; }
+    .fail { color: var(--fail); }
+    .status { color: var(--muted); margin-left: 8px; }
+    .tabs { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+    .tab {
+      background: #121920;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .tab.active { border-color: var(--agent); background: #1e2a24; }
+    .answers td { vertical-align: top; max-width: 18rem; word-break: break-word; }
+    .empty { color: var(--muted); font-style: italic; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="page-title">Official Public Benchmark</h1>
+    <p id="public-sub" class="sub">
+      Frozen 100-question / 300-record comparison of RAG, GraphRAG, and Agentic GraphRAG.
+      Artifacts are read-only. Hidden-benchmark results can be loaded later as a separate run.
+      <span id="status" class="status">Loading…</span>
+    </p>
+    <p id="hidden-sub" class="sub" hidden>
+      Hidden Benchmark: 50 questions and 150 raw pipeline records. Hidden accuracy cannot be calculated because there are no gold answers.
+      <span id="hidden-status" class="status"></span>
+    </p>
+    <div class="tabs">
+      <button type="button" class="tab active" data-run="public">Official Public Benchmark</button>
+      <button type="button" class="tab" data-run="hidden">Hidden Benchmark</button>
+    </div>
+  </header>
+  <main id="root"></main>
+  <script>
+    const PIPE_CLASS = { rag: "rag", graphrag: "graph", agentic: "agent" };
+    const PIPE_LABEL = { rag: "RAG", graphrag: "GraphRAG", agentic: "Agentic" };
+
+    function pct(n) { return (Number(n) || 0).toFixed(2) + "%"; }
+    function num(n, d) { return Number(n).toFixed(d); }
+    function bar(value, cls) {
+      const width = Math.max(0, Math.min(100, Number(value) || 0));
+      return `<div class="bar-wrap"><div class="bar ${cls}" style="width:${width}%;background:currentColor"></div></div>`;
+    }
+    function card(label, value, cls) {
+      return `<div class="card"><div class="label">${label}</div><div class="value ${cls || ""}">${value}</div></div>`;
+    }
+
+    function overallHtml(data) {
+      const rows = data.overall.map(row => {
+        const cls = PIPE_CLASS[row.pipeline];
+        return `<tr>
+          <td class="${cls}">${PIPE_LABEL[row.pipeline]}</td>
+          <td class="num">${row.n}</td>
+          <td class="num ${cls}">${pct(row.accuracy_pct)}</td>
+          <td>${bar(row.accuracy_pct, cls)}</td>
+          <td class="num">${pct(row.retrieval_success_pct)}</td>
+          <td class="num">${num(row.completeness, 4)}</td>
+          <td class="num">${num(row.avg_latency_sec, 2)}</td>
+          <td class="num">${num(row.median_latency_sec, 2)}</td>
+        </tr>`;
+      }).join("");
+      return `<section>
+        <h2>A. Overall pipeline comparison</h2>
+        <table>
+          <thead><tr>
+            <th>Pipeline</th><th class="num">n</th><th class="num">Accuracy</th><th></th>
+            <th class="num">Retrieval success</th><th class="num">Completeness</th>
+            <th class="num">Avg latency (s)</th><th class="num">Median latency (s)</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+        <p class="note">Official headline: RAG 10%, GraphRAG 60%, Agentic 92%.</p>
+      </section>`;
+    }
+
+    function qtypeHtml(data) {
+      const rows = data.by_qtype.map(row => `<tr>
+        <td>${row.qtype} <span class="status">n=${row.n}</span></td>
+        <td class="num rag">${pct(row.rag_accuracy_pct)}</td>
+        <td class="num graph">${pct(row.graphrag_accuracy_pct)}</td>
+        <td class="num agent">${pct(row.agentic_accuracy_pct)}</td>
+      </tr>`).join("");
+      return `<section>
+        <h2>B. Question-type accuracy</h2>
+        <table>
+          <thead><tr>
+            <th>Type</th><th class="num">RAG</th><th class="num">GraphRAG</th><th class="num">Agentic</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </section>`;
+    }
+
+    function advantageHtml(data) {
+      const a = data.advantage;
+      return `<section>
+        <h2>C. Agentic advantage</h2>
+        <div class="cards">
+          ${card("Agentic correct / RAG incorrect", a.agentic_correct_rag_incorrect.n, "agent")}
+          ${card("Agentic correct / GraphRAG incorrect", a.agentic_correct_graphrag_incorrect.n, "agent")}
+          ${card("All three correct", a.all_three_correct.n)}
+          ${card("GraphRAG correct / Agentic incorrect", a.graphrag_correct_agentic_incorrect.n, "graph")}
+          ${card("RAG correct / Agentic incorrect", a.rag_correct_agentic_incorrect.n, "rag")}
+        </div>
+      </section>`;
+    }
+
+    function behaviorHtml(data) {
+      const b = data.agentic_behavior;
+      const notes = (b.token_notes || []).map(n => `<li>${n}</li>`).join("");
+      return `<section>
+        <h2>D. Agentic behavior</h2>
+        <div class="cards">
+          ${card("Average steps", b.avg_agent_steps, "agent")}
+          ${card("% using ≥2 tools", pct(b.pct_using_ge2_tools))}
+          ${card("% stopping ≤2 tools", pct(b.pct_stopping_le2_tools))}
+          ${card("Ollama generate calls", b.n_with_ollama_generate, "warn")}
+          ${card("Answered without Ollama generate", b.n_without_ollama_generate, "agent")}
+        </div>
+        <div class="warn">${data.token_warning}</div>
+        <p class="note">Token metrics, if shown, are labeled separately:</p>
+        <ul class="note">${notes}</ul>
+      </section>`;
+    }
+
+    function failuresHtml(data) {
+      const cats = data.failures.categories || {};
+      const catRows = Object.entries(cats).map(([k, v]) =>
+        `<tr><td>${k}</td><td class="num">${v}</td></tr>`
+      ).join("");
+      const failRows = (data.failures.agentic || []).map(row => {
+        const gold = Array.isArray(row.gold_answer) ? row.gold_answer.join(" | ") : (row.gold_answer || "");
+        return `<tr>
+          <td class="qid">${row.qid}</td>
+          <td>${row.qtype || ""}</td>
+          <td>${gold}</td>
+          <td class="fail">${row.predicted_answer || ""}</td>
+          <td>${row.gold_doc_retrieved}</td>
+        </tr>`;
+      }).join("");
+      return `<section>
+        <h2>E. Agentic failure summary</h2>
+        <p class="note">Official Agentic failures: ${data.failures.n_agentic_failures}. Categories come from the frozen failure artifact / summary.</p>
+        <table>
+          <thead><tr><th>Category</th><th class="num">n</th></tr></thead>
+          <tbody>${catRows}</tbody>
+        </table>
+        <table style="margin-top:14px">
+          <thead><tr>
+            <th>qid</th><th>qtype</th><th>gold</th><th>predicted</th><th>gold doc retrieved</th>
+          </tr></thead>
+          <tbody>${failRows}</tbody>
+        </table>
+      </section>`;
+    }
+
+    function tokensHtml(data) {
+      const rows = data.overall.map(row => {
+        const cls = PIPE_CLASS[row.pipeline];
+        return `<tr>
+          <td class="${cls}">${PIPE_LABEL[row.pipeline]}</td>
+          <td class="num">${num(row.avg_context_tokens, 1)}</td>
+          <td class="num">${num(row.avg_llm_prompt_tokens, 1)}</td>
+          <td class="num">${num(row.avg_llm_output_tokens, 1)}</td>
+          <td class="num">${num(row.avg_llm_total_tokens, 1)}</td>
+        </tr>`;
+      }).join("");
+      return `<section>
+        <h2>F. Token metrics (not LLM-cost efficiency)</h2>
+        <table>
+          <thead><tr>
+            <th>Pipeline</th>
+            <th class="num">Avg context_token_count</th>
+            <th class="num">Avg Ollama prompt tokens</th>
+            <th class="num">Avg Ollama eval tokens</th>
+            <th class="num">Avg Ollama total tokens</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+        <p class="note">context_token_count is evidence word count. Ollama columns are generate-call tokens averaged only over records with a generate call. Token-efficiency/1k from the official summary is omitted here so it is not mistaken for LLM-cost efficiency.</p>
+      </section>`;
+    }
+
+    function tokensHtml(data) {
+      const rows = data.overall.map(row => {
+        const cls = PIPE_CLASS[row.pipeline];
+        return `<tr>
+          <td class="${cls}">${PIPE_LABEL[row.pipeline]}</td>
+          <td class="num">${num(row.avg_context_tokens, 1)}</td>
+          <td class="num">${num(row.avg_llm_prompt_tokens, 1)}</td>
+          <td class="num">${num(row.avg_llm_output_tokens, 1)}</td>
+          <td class="num">${num(row.avg_llm_total_tokens, 1)}</td>
+        </tr>`;
+      }).join("");
+      return `<section>
+        <h2>F. Token metrics (not LLM-cost efficiency)</h2>
+        <table>
+          <thead><tr>
+            <th>Pipeline</th>
+            <th class="num">Avg context_token_count</th>
+            <th class="num">Avg Ollama prompt tokens</th>
+            <th class="num">Avg Ollama eval tokens</th>
+            <th class="num">Avg Ollama total tokens</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+        <p class="note">context_token_count is evidence word count. Ollama columns are generate-call tokens averaged only over records with a generate call. Token-efficiency/1k from the official summary is omitted here so it is not mistaken for LLM-cost efficiency.</p>
+      </section>`;
+    }
+
+    function renderPublic(data) {
+      const c = data.counts;
+      document.getElementById("page-title").textContent = "Official Public Benchmark";
+      document.getElementById("public-sub").hidden = false;
+      document.getElementById("hidden-sub").hidden = true;
+      document.getElementById("status").textContent =
+        `${data.run} · ${c.n_questions} questions · ${c.n_records} records · RAG ${c.n_rag} · GraphRAG ${c.n_graphrag} · Agentic ${c.n_agentic}`;
+      document.getElementById("root").innerHTML = [
+        overallHtml(data),
+        qtypeHtml(data),
+        advantageHtml(data),
+        behaviorHtml(data),
+        failuresHtml(data),
+        tokensHtml(data),
+      ].join("");
+    }
+
+    function esc(value) {
+      return String(value ?? "").replace(/[&<>"']/g, ch => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+      }[ch]));
+    }
+
+    function answerCell(text) {
+      const raw = text == null ? "" : String(text);
+      if (!raw.trim()) return `<span class="empty">empty</span>`;
+      return esc(raw);
+    }
+
+    function hiddenCountsHtml(data) {
+      const c = data.counts;
+      return `<section>
+        <h2>1. Hidden run counts</h2>
+        <div class="warn">${esc(data.no_gold_note)}</div>
+        <div class="cards" style="margin-top:12px">
+          ${card("Hidden questions", c.n_questions)}
+          ${card("Total records", c.n_records)}
+          ${card("RAG records", c.n_rag, "rag")}
+          ${card("GraphRAG records", c.n_graphrag, "graph")}
+          ${card("Agentic records", c.n_agentic, "agent")}
+        </div>
+      </section>`;
+    }
+
+    function hiddenCompletenessHtml(data) {
+      const rows = (data.completeness || []).map(row => {
+        const cls = PIPE_CLASS[row.pipeline];
+        return `<tr>
+          <td class="${cls}">${PIPE_LABEL[row.pipeline]}</td>
+          <td class="num">${row.n}</td>
+          <td class="num">${row.n_with_answer}</td>
+          <td class="num">${row.n_empty_answer}</td>
+          <td class="num">${row.n_errors}</td>
+        </tr>`;
+      }).join("");
+      return `<section>
+        <h2>2. Raw-answer availability</h2>
+        <p class="note">Empty answers are shown as recorded. They are not scored. Hidden accuracy cannot be calculated because there are no gold answers.</p>
+        <table>
+          <thead><tr>
+            <th>Pipeline</th><th class="num">n</th><th class="num">Non-empty answer</th>
+            <th class="num">Empty answer</th><th class="num">Errors</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </section>`;
+    }
+
+    function hiddenLatencyHtml(data) {
+      const rows = (data.latency || []).map(row => {
+        const cls = PIPE_CLASS[row.pipeline];
+        return `<tr>
+          <td class="${cls}">${PIPE_LABEL[row.pipeline]}</td>
+          <td class="num">${num(row.avg_latency_seconds, 2)}</td>
+          <td class="num">${num(row.median_latency_seconds, 2)}</td>
+          <td class="num">${num(row.min_latency_seconds, 2)}</td>
+          <td class="num">${num(row.max_latency_seconds, 2)}</td>
+        </tr>`;
+      }).join("");
+      return `<section>
+        <h2>3. Latency comparison</h2>
+        <table>
+          <thead><tr>
+            <th>Pipeline</th>
+            <th class="num">Avg (s)</th><th class="num">Median (s)</th>
+            <th class="num">Min (s)</th><th class="num">Max (s)</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </section>`;
+    }
+
+    function hiddenRetrievalHtml(data) {
+      const rows = (data.retrieval || []).map(row => {
+        const cls = PIPE_CLASS[row.pipeline];
+        return `<tr>
+          <td class="${cls}">${PIPE_LABEL[row.pipeline]}</td>
+          <td class="num">${row.n_with_documents}</td>
+          <td class="num">${row.n_with_evidence}</td>
+          <td class="num">${row.n_with_graph_paths == null ? "—" : row.n_with_graph_paths}</td>
+          <td class="num">${row.n_with_entities == null ? "—" : row.n_with_entities}</td>
+        </tr>`;
+      }).join("");
+      return `<section>
+        <h2>4. Retrieval / evidence availability</h2>
+        <p class="note">Counts are field presence in the hidden records, not retrieval success against gold documents.</p>
+        <table>
+          <thead><tr>
+            <th>Pipeline</th>
+            <th class="num">With document IDs</th>
+            <th class="num">With evidence</th>
+            <th class="num">With graph paths</th>
+            <th class="num">With entities</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </section>`;
+    }
+
+    function hiddenBehaviorHtml(data) {
+      const b = data.agentic_behavior || {};
+      const reasons = (b.stop_reasons || []).map(row =>
+        `<tr><td>${esc(row.reason)}</td><td class="num">${row.n}</td></tr>`
+      ).join("");
+      return `<section>
+        <h2>5. Agentic behavior</h2>
+        <div class="cards">
+          ${card("Average steps", b.avg_agent_steps, "agent")}
+          ${card("Average tools", b.avg_tool_calls, "agent")}
+          ${card("With entities", b.n_with_entities)}
+          ${card("With evidence", b.n_with_evidence)}
+          ${card("With graph paths", b.n_with_graph_paths)}
+          ${card("With stop reason", b.n_with_stop_reason)}
+          ${card("Ollama generate used", b.n_with_ollama_generate, "warn")}
+          ${card("No Ollama generate", b.n_without_ollama_generate, "agent")}
+        </div>
+        <table style="margin-top:14px">
+          <thead><tr><th>Stopping reason</th><th class="num">n</th></tr></thead>
+          <tbody>${reasons}</tbody>
+        </table>
+      </section>`;
+    }
+
+    function hiddenTokensHtml(data) {
+      const rows = (data.llm_tokens || []).map(row => {
+        const cls = PIPE_CLASS[row.pipeline];
+        return `<tr>
+          <td class="${cls}">${PIPE_LABEL[row.pipeline]}</td>
+          <td class="num">${row.n_with_llm_tokens}</td>
+          <td class="num">${num(row.avg_llm_prompt_tokens, 1)}</td>
+          <td class="num">${num(row.avg_llm_output_tokens, 1)}</td>
+          <td class="num">${num(row.avg_llm_total_tokens, 1)}</td>
+        </tr>`;
+      }).join("");
+      return `<section>
+        <h2>6. LLM token metadata</h2>
+        <table>
+          <thead><tr>
+            <th>Pipeline</th>
+            <th class="num">Records with tokens</th>
+            <th class="num">Avg prompt tokens</th>
+            <th class="num">Avg eval tokens</th>
+            <th class="num">Avg total tokens</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+        <p class="note">${esc(data.token_warning || "")}</p>
+      </section>`;
+    }
+
+    function hiddenQuestionsHtml(data) {
+      const rows = (data.questions || []).map(row => `<tr>
+        <td class="qid">${esc(row.qid)}</td>
+        <td>${esc(row.qtype || "")}</td>
+        <td>${esc(row.question || "")}</td>
+        <td class="rag">${answerCell(row.rag_answer)}</td>
+        <td class="graph">${answerCell(row.graphrag_answer)}</td>
+        <td class="agent">${answerCell(row.agentic_answer)}</td>
+      </tr>`).join("");
+      return `<section>
+        <h2>7. All 50 hidden questions and raw answers</h2>
+        <p class="note">Raw answers only. Hidden accuracy cannot be calculated because there are no gold answers.</p>
+        <table class="answers">
+          <thead><tr>
+            <th>qid</th><th>qtype</th><th>question</th>
+            <th>RAG</th><th>GraphRAG</th><th>Agentic</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </section>`;
+    }
+
+    function renderHidden(data) {
+      const c = data.counts;
+      document.getElementById("page-title").textContent = "Hidden Benchmark";
+      document.getElementById("public-sub").hidden = true;
+      document.getElementById("hidden-sub").hidden = false;
+      document.getElementById("hidden-status").textContent =
+        `${data.run} · ${c.n_questions} questions · ${c.n_records} records · RAG ${c.n_rag} · GraphRAG ${c.n_graphrag} · Agentic ${c.n_agentic}`;
+      document.getElementById("root").innerHTML = [
+        hiddenCountsHtml(data),
+        hiddenCompletenessHtml(data),
+        hiddenLatencyHtml(data),
+        hiddenRetrievalHtml(data),
+        hiddenBehaviorHtml(data),
+        hiddenTokensHtml(data),
+        hiddenQuestionsHtml(data),
+      ].join("");
+    }
+
+    function loadRun(run) {
+      const status = document.getElementById(run === "hidden" ? "hidden-status" : "status");
+      status.textContent = "Loading…";
+      fetch("/api/dashboard?run=" + encodeURIComponent(run))
+        .then(r => {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.json();
+        })
+        .then(data => {
+          if (run === "hidden") renderHidden(data);
+          else renderPublic(data);
+        })
+        .catch(err => {
+          status.textContent = "Failed to load artifacts";
+          document.getElementById("root").innerHTML =
+            `<section class="warn">Could not load frozen benchmark artifacts: ${esc(err.message || err)}</section>`;
+        });
+    }
+
+    document.querySelectorAll(".tab").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".tab").forEach(other => other.classList.toggle("active", other === btn));
+        loadRun(btn.getAttribute("data-run"));
+      });
+    });
+
+    loadRun("public");
+  </script>
+</body>
+</html>

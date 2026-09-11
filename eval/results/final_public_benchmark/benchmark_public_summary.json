@@ -1,0 +1,2121 @@
+{
+  "overall": {
+    "rag": {
+      "n": 100,
+      "overall_accuracy": 0.1,
+      "exact_accuracy": 0.1,
+      "retrieval_success": 0.44,
+      "retrieval_completeness": 0.2557,
+      "avg_latency_sec": 250.0,
+      "median_latency_sec": 241.7,
+      "avg_context_tokens": 987.4,
+      "avg_llm_prompt_tokens": 1963.4,
+      "avg_llm_output_tokens": 9.6,
+      "avg_llm_total_tokens": 1972.9,
+      "token_efficiency_per_1k_tokens": 0.1013,
+      "avg_agent_steps": 0.0,
+      "avg_tool_calls": 0.0,
+      "n_failures": 90,
+      "n_timeouts": 0,
+      "n_errors": 0
+    },
+    "graphrag": {
+      "n": 100,
+      "overall_accuracy": 0.6,
+      "exact_accuracy": 0.6,
+      "retrieval_success": 0.95,
+      "retrieval_completeness": 0.8524,
+      "avg_latency_sec": 389.8,
+      "median_latency_sec": 426.71,
+      "avg_context_tokens": 1282.7,
+      "avg_llm_prompt_tokens": 2765.4,
+      "avg_llm_output_tokens": 17.1,
+      "avg_llm_total_tokens": 2782.4,
+      "token_efficiency_per_1k_tokens": 0.4678,
+      "avg_agent_steps": 0.0,
+      "avg_tool_calls": 0.0,
+      "n_failures": 40,
+      "n_timeouts": 3,
+      "n_errors": 3
+    },
+    "agentic": {
+      "n": 100,
+      "overall_accuracy": 0.92,
+      "exact_accuracy": 0.92,
+      "retrieval_success": 0.97,
+      "retrieval_completeness": 0.865,
+      "avg_latency_sec": 18.43,
+      "median_latency_sec": 0.42,
+      "avg_context_tokens": 1510.2,
+      "avg_llm_prompt_tokens": 494.1,
+      "avg_llm_output_tokens": 27.5,
+      "avg_llm_total_tokens": 521.6,
+      "token_efficiency_per_1k_tokens": 0.6092,
+      "avg_agent_steps": 7.93,
+      "avg_tool_calls": 7.93,
+      "n_failures": 8,
+      "n_timeouts": 1,
+      "n_errors": 1
+    }
+  },
+  "by_qtype": {
+    "rag": {
+      "lookup": {
+        "n": 19,
+        "overall_accuracy": 0.2632,
+        "exact_accuracy": 0.2632,
+        "retrieval_success": 0.5263,
+        "retrieval_completeness": 0.5263,
+        "avg_latency_sec": 247.4,
+        "median_latency_sec": 242.7,
+        "avg_context_tokens": 1030.9,
+        "avg_llm_prompt_tokens": 1987.9,
+        "avg_llm_output_tokens": 5.5,
+        "avg_llm_total_tokens": 1993.4,
+        "token_efficiency_per_1k_tokens": 0.2553,
+        "avg_agent_steps": 0.0,
+        "avg_tool_calls": 0.0,
+        "n_failures": 14,
+        "n_timeouts": 0,
+        "n_errors": 0
+      },
+      "aggregation": {
+        "n": 21,
+        "overall_accuracy": 0.0,
+        "exact_accuracy": 0.0,
+        "retrieval_success": 0.619,
+        "retrieval_completeness": 0.0779,
+        "avg_latency_sec": 237.14,
+        "median_latency_sec": 238.39,
+        "avg_context_tokens": 920.6,
+        "avg_llm_prompt_tokens": 1886.0,
+        "avg_llm_output_tokens": 9.0,
+        "avg_llm_total_tokens": 1895.0,
+        "token_efficiency_per_1k_tokens": 0.0,
+        "avg_agent_steps": 0.0,
+        "avg_tool_calls": 0.0,
+        "n_failures": 21,
+        "n_timeouts": 0,
+        "n_errors": 0
+      },
+      "temporal": {
+        "n": 22,
+        "overall_accuracy": 0.0909,
+        "exact_accuracy": 0.0909,
+        "retrieval_success": 0.4091,
+        "retrieval_completeness": 0.25,
+        "avg_latency_sec": 258.06,
+        "median_latency_sec": 250.83,
+        "avg_context_tokens": 1024.0,
+        "avg_llm_prompt_tokens": 1941.4,
+        "avg_llm_output_tokens": 9.5,
+        "avg_llm_total_tokens": 1951.0,
+        "token_efficiency_per_1k_tokens": 0.0888,
+        "avg_agent_steps": 0.0,
+        "avg_tool_calls": 0.0,
+        "n_failures": 20,
+        "n_timeouts": 0,
+        "n_errors": 0
+      },
+      "multi_hop": {
+        "n": 28,
+        "overall_accuracy": 0.1071,
+        "exact_accuracy": 0.1071,
+        "retrieval_success": 0.2857,
+        "retrieval_completeness": 0.2857,
+        "avg_latency_sec": 262.33,
+        "median_latency_sec": 256.48,
+        "avg_context_tokens": 995.4,
+        "avg_llm_prompt_tokens": 2050.1,
+        "avg_llm_output_tokens": 11.2,
+        "avg_llm_total_tokens": 2061.3,
+        "token_efficiency_per_1k_tokens": 0.1076,
+        "avg_agent_steps": 0.0,
+        "avg_tool_calls": 0.0,
+        "n_failures": 25,
+        "n_timeouts": 0,
+        "n_errors": 0
+      },
+      "superlative": {
+        "n": 10,
+        "overall_accuracy": 0.0,
+        "exact_accuracy": 0.0,
+        "retrieval_success": 0.4,
+        "retrieval_completeness": 0.0438,
+        "avg_latency_sec": 229.65,
+        "median_latency_sec": 235.15,
+        "avg_context_tokens": 941.9,
+        "avg_llm_prompt_tokens": 1884.9,
+        "avg_llm_output_tokens": 13.7,
+        "avg_llm_total_tokens": 1898.6,
+        "token_efficiency_per_1k_tokens": 0.0,
+        "avg_agent_steps": 0.0,
+        "avg_tool_calls": 0.0,
+        "n_failures": 10,
+        "n_timeouts": 0,
+        "n_errors": 0
+      }
+    },
+    "graphrag": {
+      "lookup": {
+        "n": 19,
+        "overall_accuracy": 0.9474,
+        "exact_accuracy": 0.9474,
+        "retrieval_success": 1.0,
+        "retrieval_completeness": 1.0,
+        "avg_latency_sec": 417.73,
+        "median_latency_sec": 432.16,
+        "avg_context_tokens": 1515.6,
+        "avg_llm_prompt_tokens": 3169.7,
+        "avg_llm_output_tokens": 16.3,
+        "avg_llm_total_tokens": 3186.1,
+        "token_efficiency_per_1k_tokens": 0.6251,
+        "avg_agent_steps": 0.0,
+        "avg_tool_calls": 0.0,
+        "n_failures": 1,
+        "n_timeouts": 0,
+        "n_errors": 0
+      },
+      "aggregation": {
+        "n": 21,
+        "overall_accuracy": 0.0476,
+        "exact_accuracy": 0.0476,
+        "retrieval_success": 0.9048,
+        "retrieval_completeness": 0.5706,
+        "avg_latency_sec": 457.72,
+        "median_latency_sec": 445.59,
+        "avg_context_tokens": 1511.1,
+        "avg_llm_prompt_tokens": 3297.9,
+        "avg_llm_output_tokens": 21.3,
+        "avg_llm_total_tokens": 3319.2,
+        "token_efficiency_per_1k_tokens": 0.0315,
+        "avg_agent_steps": 0.0,
+        "avg_tool_calls": 0.0,
+        "n_failures": 20,
+        "n_timeouts": 2,
+        "n_errors": 2
+      },
+      "temporal": {
+        "n": 22,
+        "overall_accuracy": 0.9545,
+        "exact_accuracy": 0.9545,
+        "retrieval_success": 0.9545,
+        "retrieval_completeness": 0.9545,
+        "avg_latency_sec": 529.52,
+        "median_latency_sec": 451.07,
+        "avg_context_tokens": 1460.8,
+        "avg_llm_prompt_tokens": 3264.0,
+        "avg_llm_output_tokens": 6.1,
+        "avg_llm_total_tokens": 3270.1,
+        "token_efficiency_per_1k_tokens": 0.6534,
+        "avg_agent_steps": 0.0,
+        "avg_tool_calls": 0.0,
+        "n_failures": 1,
+        "n_timeouts": 1,
+        "n_errors": 1
+      },
+      "multi_hop": {
+        "n": 28,
+        "overall_accuracy": 0.7143,
+        "exact_accuracy": 0.7143,
+        "retrieval_success": 0.9286,
+        "retrieval_completeness": 0.9286,
+        "avg_latency_sec": 192.19,
+        "median_latency_sec": 120.88,
+        "avg_context_tokens": 676.3,
+        "avg_llm_prompt_tokens": 1573.2,
+        "avg_llm_output_tokens": 6.9,
+        "avg_llm_total_tokens": 1580.1,
+        "token_efficiency_per_1k_tokens": 1.0561,
+        "avg_agent_steps": 0.0,
+        "avg_tool_calls": 0.0,
+        "n_failures": 8,
+        "n_timeouts": 0,
+        "n_errors": 0
+      },
+      "superlative": {
+        "n": 10,
+        "overall_accuracy": 0.0,
+        "exact_accuracy": 0.0,
+        "retrieval_success": 1.0,
+        "retrieval_completeness": 0.7256,
+        "avg_latency_sec": 440.01,
+        "median_latency_sec": 420.26,
+        "avg_context_tokens": 1666.4,
+        "avg_llm_prompt_tokens": 3156.7,
+        "avg_llm_output_tokens": 61.0,
+        "avg_llm_total_tokens": 3217.7,
+        "token_efficiency_per_1k_tokens": 0.0,
+        "avg_agent_steps": 0.0,
+        "avg_tool_calls": 0.0,
+        "n_failures": 10,
+        "n_timeouts": 0,
+        "n_errors": 0
+      }
+    },
+    "agentic": {
+      "lookup": {
+        "n": 19,
+        "overall_accuracy": 0.9474,
+        "exact_accuracy": 0.9474,
+        "retrieval_success": 0.9474,
+        "retrieval_completeness": 0.9474,
+        "avg_latency_sec": 91.93,
+        "median_latency_sec": 45.74,
+        "avg_context_tokens": 228.6,
+        "avg_llm_prompt_tokens": 494.1,
+        "avg_llm_output_tokens": 27.5,
+        "avg_llm_total_tokens": 521.6,
+        "token_efficiency_per_1k_tokens": 4.1446,
+        "avg_agent_steps": 2.42,
+        "avg_tool_calls": 2.42,
+        "n_failures": 1,
+        "n_timeouts": 1,
+        "n_errors": 1
+      },
+      "aggregation": {
+        "n": 21,
+        "overall_accuracy": 0.9524,
+        "exact_accuracy": 0.9524,
+        "retrieval_success": 1.0,
+        "retrieval_completeness": 1.0,
+        "avg_latency_sec": 1.27,
+        "median_latency_sec": 0.68,
+        "avg_context_tokens": 4341.2,
+        "avg_llm_prompt_tokens": 0.0,
+        "avg_llm_output_tokens": 0.0,
+        "avg_llm_total_tokens": 0.0,
+        "token_efficiency_per_1k_tokens": 0.2194,
+        "avg_agent_steps": 18.1,
+        "avg_tool_calls": 18.1,
+        "n_failures": 1,
+        "n_timeouts": 0,
+        "n_errors": 0
+      },
+      "temporal": {
+        "n": 22,
+        "overall_accuracy": 0.9545,
+        "exact_accuracy": 0.9545,
+        "retrieval_success": 0.9545,
+        "retrieval_completeness": 0.4773,
+        "avg_latency_sec": 0.24,
+        "median_latency_sec": 0.09,
+        "avg_context_tokens": 243.2,
+        "avg_llm_prompt_tokens": 0.0,
+        "avg_llm_output_tokens": 0.0,
+        "avg_llm_total_tokens": 0.0,
+        "token_efficiency_per_1k_tokens": 3.9252,
+        "avg_agent_steps": 3.0,
+        "avg_tool_calls": 3.0,
+        "n_failures": 1,
+        "n_timeouts": 0,
+        "n_errors": 0
+      },
+      "multi_hop": {
+        "n": 28,
+        "overall_accuracy": 0.8214,
+        "exact_accuracy": 0.8214,
+        "retrieval_success": 0.9643,
+        "retrieval_completeness": 0.9643,
+        "avg_latency_sec": 1.93,
+        "median_latency_sec": 0.36,
+        "avg_context_tokens": 534.4,
+        "avg_llm_prompt_tokens": 0.0,
+        "avg_llm_output_tokens": 0.0,
+        "avg_llm_total_tokens": 0.0,
+        "token_efficiency_per_1k_tokens": 1.5371,
+        "avg_agent_steps": 5.46,
+        "avg_tool_calls": 5.46,
+        "n_failures": 5,
+        "n_timeouts": 0,
+        "n_errors": 0
+      },
+      "superlative": {
+        "n": 10,
+        "overall_accuracy": 1.0,
+        "exact_accuracy": 1.0,
+        "retrieval_success": 1.0,
+        "retrieval_completeness": 1.0,
+        "avg_latency_sec": 1.05,
+        "median_latency_sec": 0.5,
+        "avg_context_tokens": 3520.0,
+        "avg_llm_prompt_tokens": 0.0,
+        "avg_llm_output_tokens": 0.0,
+        "avg_llm_total_tokens": 0.0,
+        "token_efficiency_per_1k_tokens": 0.2841,
+        "avg_agent_steps": 14.8,
+        "avg_tool_calls": 14.8,
+        "n_failures": 0,
+        "n_timeouts": 0,
+        "n_errors": 0
+      }
+    }
+  },
+  "qtype_counts": {
+    "aggregation": 21,
+    "temporal": 22,
+    "superlative": 10,
+    "multi_hop": 28,
+    "lookup": 19
+  },
+  "agentic_effectiveness": {
+    "accuracy_delta_vs_rag": 0.82,
+    "accuracy_delta_vs_graphrag": 0.32,
+    "avg_context_token_delta_vs_rag": 522.8,
+    "avg_context_token_delta_vs_graphrag": 227.5,
+    "avg_llm_total_token_delta_vs_rag": -1451.3,
+    "avg_llm_total_token_delta_vs_graphrag": -2260.8,
+    "avg_latency_delta_vs_rag": -231.57,
+    "avg_latency_delta_vs_graphrag": -371.37,
+    "avg_investigation_steps": 7.93,
+    "pct_multiple_investigative_actions": 99.0,
+    "pct_minimal_investigation": 10.0,
+    "n_agent_beats_rag": 82,
+    "n_agent_beats_graphrag": 35,
+    "n_agent_unnecessary_all_correct": 10,
+    "n_agent_failed": 8
+  },
+  "agentic_effectiveness_examples": {
+    "beats_rag": [
+      {
+        "qid": "pub-001",
+        "qtype": "aggregation",
+        "gold": [
+          "5"
+        ],
+        "agentic": "5",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": ""
+      },
+      {
+        "qid": "pub-002",
+        "qtype": "temporal",
+        "gold": [
+          "Chen Ding"
+        ],
+        "agentic": "Chen Ding",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Chen Ding"
+      },
+      {
+        "qid": "pub-003",
+        "qtype": "aggregation",
+        "gold": [
+          "8"
+        ],
+        "agentic": "8",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-004",
+        "qtype": "superlative",
+        "gold": [
+          "Athletics at the 2008 Summer Olympics – Men's marathon"
+        ],
+        "agentic": "Athletics at the 2008 Summer Olympics – Men's marathon",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-005",
+        "qtype": "multi_hop",
+        "gold": [
+          "Naim Süleymanoğlu"
+        ],
+        "agentic": "Naim Süleymanoğlu",
+        "rag": "Miloslav Mečíř",
+        "graphrag": "Naim Süleymanoğlu"
+      },
+      {
+        "qid": "pub-007",
+        "qtype": "temporal",
+        "gold": [
+          "Renaud Lavillenie"
+        ],
+        "agentic": "Renaud Lavillenie",
+        "rag": "Sergey Bubka",
+        "graphrag": "Renaud Lavillenie"
+      },
+      {
+        "qid": "pub-008",
+        "qtype": "superlative",
+        "gold": [
+          "Sailing at the 2000 Summer Olympics – Soling"
+        ],
+        "agentic": "Sailing at the 2000 Summer Olympics – Soling",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Laser"
+      },
+      {
+        "qid": "pub-010",
+        "qtype": "aggregation",
+        "gold": [
+          "4"
+        ],
+        "agentic": "4",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-011",
+        "qtype": "multi_hop",
+        "gold": [
+          "Martina Sáblíková"
+        ],
+        "agentic": "Martina Sáblíková",
+        "rag": "Lee Seung-hoon",
+        "graphrag": "Martina Sáblíková"
+      },
+      {
+        "qid": "pub-012",
+        "qtype": "aggregation",
+        "gold": [
+          "6"
+        ],
+        "agentic": "6",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "3"
+      },
+      {
+        "qid": "pub-013",
+        "qtype": "temporal",
+        "gold": [
+          "Allison Schmitt"
+        ],
+        "agentic": "Allison Schmitt",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Allison Schmitt"
+      },
+      {
+        "qid": "pub-014",
+        "qtype": "multi_hop",
+        "gold": [
+          "Carolina Marín"
+        ],
+        "agentic": "Carolina Marín",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Chen Long"
+      },
+      {
+        "qid": "pub-015",
+        "qtype": "multi_hop",
+        "gold": [
+          "Dani KingLaura TrottJoanna Rowsell"
+        ],
+        "agentic": "Dani KingLaura TrottJoanna Rowsell",
+        "rag": "The gold medal in the event held at London Velopark on 3 to 4 August at the 2012 Summer Olympics was won by Dani King, Laura Trott, and Joanna Rowsell representing Great Britain.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-016",
+        "qtype": "temporal",
+        "gold": [
+          "Arnd Peiffer"
+        ],
+        "agentic": "Arnd Peiffer",
+        "rag": "Ole Einar Bjørndalen",
+        "graphrag": ""
+      },
+      {
+        "qid": "pub-017",
+        "qtype": "multi_hop",
+        "gold": [
+          "Yi Siling"
+        ],
+        "agentic": "Yi Siling",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Yi Siling"
+      },
+      {
+        "qid": "pub-018",
+        "qtype": "temporal",
+        "gold": [
+          "Kevin Jackson"
+        ],
+        "agentic": "Kevin Jackson",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Kevin Jackson"
+      },
+      {
+        "qid": "pub-019",
+        "qtype": "aggregation",
+        "gold": [
+          "3"
+        ],
+        "agentic": "3",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "3"
+      },
+      {
+        "qid": "pub-020",
+        "qtype": "aggregation",
+        "gold": [
+          "4"
+        ],
+        "agentic": "4",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": ""
+      },
+      {
+        "qid": "pub-021",
+        "qtype": "superlative",
+        "gold": [
+          "Alpine skiing at the 1988 Winter Olympics – Men's giant slalom"
+        ],
+        "agentic": "Alpine skiing at the 1988 Winter Olympics – Men's giant slalom",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "The Women's combined event at the 1988 Winter Olympics was held at Nakiska, with the following results:\n\n**Gold Medalist:**  \n- **Anita Wachter** (AUT) with a total time of **2:08.39** and a time difference of **+2.02**.\n\n**Silver Medalist:**  \n- **Brigitte Oertli** (SUI) with a total time of **2:08.77** and a time difference of **+2.40**.\n\n**Bronze Medalist:**  \n- **Maria Walliser** (SUI) with a total time of **2:08.92** and a time difference of **+2.55**.\n\n**Winning Points:**  \n- The winning points for the gold medal were **29.25**.\n\n**Key Notes:**  \n- The event took place on **February 20–21, 1988**.\n- The defending world champion in the combined event was **Erika Hess** of Switzerland, while **Brigitte Oertli** was the defending World Cup combined champion.\n- The competition involved **39 competitors** from **1"
+      },
+      {
+        "qid": "pub-023",
+        "qtype": "multi_hop",
+        "gold": [
+          "Hwang Young-Cho"
+        ],
+        "agentic": "Hwang Young-Cho",
+        "rag": "Kevin Young",
+        "graphrag": "Hwang Young-Cho"
+      },
+      {
+        "qid": "pub-024",
+        "qtype": "aggregation",
+        "gold": [
+          "3"
+        ],
+        "agentic": "3",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-026",
+        "qtype": "temporal",
+        "gold": [
+          "Jaroslav Kulhavý"
+        ],
+        "agentic": "Jaroslav Kulhavý",
+        "rag": "Greg Van Avermaet",
+        "graphrag": "Jaroslav Kulhavý"
+      },
+      {
+        "qid": "pub-027",
+        "qtype": "aggregation",
+        "gold": [
+          "4"
+        ],
+        "agentic": "4",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-028",
+        "qtype": "multi_hop",
+        "gold": [
+          "Michael Phelps"
+        ],
+        "agentic": "Michael Phelps",
+        "rag": "Answer: Michael Phelps",
+        "graphrag": "Michael Phelps"
+      },
+      {
+        "qid": "pub-029",
+        "qtype": "lookup",
+        "gold": [
+          "28"
+        ],
+        "agentic": "28",
+        "rag": "41",
+        "graphrag": "28"
+      },
+      {
+        "qid": "pub-030",
+        "qtype": "multi_hop",
+        "gold": [
+          "Emese Szász"
+        ],
+        "agentic": "Emese Szász",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Emese Szász"
+      },
+      {
+        "qid": "pub-031",
+        "qtype": "multi_hop",
+        "gold": [
+          "Dmitry Berestov"
+        ],
+        "agentic": "Dmitry Berestov",
+        "rag": "Liu Chunhong",
+        "graphrag": "Dmitry Berestov"
+      },
+      {
+        "qid": "pub-033",
+        "qtype": "aggregation",
+        "gold": [
+          "4"
+        ],
+        "agentic": "4",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-034",
+        "qtype": "lookup",
+        "gold": [
+          "23"
+        ],
+        "agentic": "23",
+        "rag": "20",
+        "graphrag": "23"
+      },
+      {
+        "qid": "pub-035",
+        "qtype": "lookup",
+        "gold": [
+          "30"
+        ],
+        "agentic": "30",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "30"
+      },
+      {
+        "qid": "pub-036",
+        "qtype": "temporal",
+        "gold": [
+          "Zou Shiming"
+        ],
+        "agentic": "Zou Shiming",
+        "rag": "Hasanboy Dusmatov from Uzbekistan won the gold medal.",
+        "graphrag": "Zou Shiming"
+      },
+      {
+        "qid": "pub-037",
+        "qtype": "superlative",
+        "gold": [
+          "Shooting at the 2008 Summer Olympics – Men's 50 metre rifle prone"
+        ],
+        "agentic": "Shooting at the 2008 Summer Olympics – Men's 50 metre rifle prone",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "The Men's 10 metre air rifle event had the highest number of competitors with 51."
+      },
+      {
+        "qid": "pub-039",
+        "qtype": "temporal",
+        "gold": [
+          "Sandra Perković"
+        ],
+        "agentic": "Sandra Perković",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Sandra Perković"
+      },
+      {
+        "qid": "pub-041",
+        "qtype": "multi_hop",
+        "gold": [
+          "Nino Schurter"
+        ],
+        "agentic": "Nino Schurter",
+        "rag": "Tony Yoka",
+        "graphrag": "Nino Schurter"
+      },
+      {
+        "qid": "pub-042",
+        "qtype": "lookup",
+        "gold": [
+          "47"
+        ],
+        "agentic": "47",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "**Answer:**\n\nKjetil André Aamodt won the **Men's Super-G** event at the **Albertville 1992 Winter Olympics**, held at **Val d'Isère, Face de Bellevarde**. He was the **Norwegian champion**, and Norway captured **three of the top four spots** in the competition, with **Jan Einar Thorsen** winning **bronze** and **Ole Kristian Furuseth** finishing **fourth**.\n\nIn the **Men's Giant Slalom** event at the **2002 Winter Olympics** in **Park City**, **Stephan Eberharter** of **Austria** won gold, becoming the **oldest man to win an alpine event at the Olympics**. **Bode Miller** of the **United States** won silver, and **Lasse Kjus** of **Norway** won bronze. **Kjetil André Aamodt** of **Norway** finished **7th** in this event.\n\nIn the **Men's Giant Slalom** event at the **2006 Winter Olympics** in **Sestriere**, **Benjamin Raich** of **Austria** won gold, **"
+      },
+      {
+        "qid": "pub-044",
+        "qtype": "superlative",
+        "gold": [
+          "Fencing at the 2008 Summer Olympics – Men's épée"
+        ],
+        "agentic": "Fencing at the 2008 Summer Olympics – Men's épée",
+        "rag": "The men's épée event at the 2008 Summer Olympics had the highest number of competitors with 41 competitors.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-045",
+        "qtype": "aggregation",
+        "gold": [
+          "20"
+        ],
+        "agentic": "20",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "3"
+      },
+      {
+        "qid": "pub-047",
+        "qtype": "lookup",
+        "gold": [
+          "24"
+        ],
+        "agentic": "24",
+        "rag": "32",
+        "graphrag": "24"
+      },
+      {
+        "qid": "pub-048",
+        "qtype": "temporal",
+        "gold": [
+          "Servet Tazegül"
+        ],
+        "agentic": "Servet Tazegül",
+        "rag": "Hadi Saei",
+        "graphrag": "Servet Tazegül"
+      },
+      {
+        "qid": "pub-049",
+        "qtype": "temporal",
+        "gold": [
+          "Martin Fourcade"
+        ],
+        "agentic": "Martin Fourcade",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Martin Fourcade"
+      },
+      {
+        "qid": "pub-050",
+        "qtype": "multi_hop",
+        "gold": [
+          "Lee Sang-hwa"
+        ],
+        "agentic": "Lee Sang-hwa",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Lee Sang-hwa"
+      },
+      {
+        "qid": "pub-052",
+        "qtype": "lookup",
+        "gold": [
+          "20"
+        ],
+        "agentic": "20",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "20"
+      },
+      {
+        "qid": "pub-053",
+        "qtype": "superlative",
+        "gold": [
+          "Shooting at the 2016 Summer Olympics – Women's 10 metre air rifle"
+        ],
+        "agentic": "Shooting at the 2016 Summer Olympics – Women's 10 metre air rifle",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-054",
+        "qtype": "lookup",
+        "gold": [
+          "24"
+        ],
+        "agentic": "24",
+        "rag": "26",
+        "graphrag": "24"
+      },
+      {
+        "qid": "pub-056",
+        "qtype": "temporal",
+        "gold": [
+          "Yevgeny Dementyev"
+        ],
+        "agentic": "Yevgeny Dementyev",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Yevgeny Dementyev"
+      },
+      {
+        "qid": "pub-057",
+        "qtype": "temporal",
+        "gold": [
+          "Allyson Felix"
+        ],
+        "agentic": "Allyson Felix",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Allyson Felix"
+      },
+      {
+        "qid": "pub-058",
+        "qtype": "aggregation",
+        "gold": [
+          "5"
+        ],
+        "agentic": "5",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "3"
+      },
+      {
+        "qid": "pub-059",
+        "qtype": "temporal",
+        "gold": [
+          "Laura Dahlmeier"
+        ],
+        "agentic": "Laura Dahlmeier",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Laura Dahlmeier"
+      },
+      {
+        "qid": "pub-061",
+        "qtype": "lookup",
+        "gold": [
+          "34"
+        ],
+        "agentic": "34",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "34"
+      },
+      {
+        "qid": "pub-062",
+        "qtype": "temporal",
+        "gold": [
+          "Tirunesh Dibaba"
+        ],
+        "agentic": "Tirunesh Dibaba",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Tirunesh Dibaba"
+      },
+      {
+        "qid": "pub-064",
+        "qtype": "multi_hop",
+        "gold": [
+          "Gabriela Szabo"
+        ],
+        "agentic": "Gabriela Szabo",
+        "rag": "Szymon Ziółkowski",
+        "graphrag": "Gabriela Szabo"
+      },
+      {
+        "qid": "pub-065",
+        "qtype": "aggregation",
+        "gold": [
+          "5"
+        ],
+        "agentic": "5",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-066",
+        "qtype": "superlative",
+        "gold": [
+          "Weightlifting at the 1992 Summer Olympics – Men's 75 kg"
+        ],
+        "agentic": "Weightlifting at the 1992 Summer Olympics – Men's 75 kg",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "The Men's 75 kg event had the highest number of competitors with 34."
+      },
+      {
+        "qid": "pub-067",
+        "qtype": "multi_hop",
+        "gold": [
+          "Rosannagh MacLennan"
+        ],
+        "agentic": "Rosannagh MacLennan",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Rosannagh MacLennan"
+      },
+      {
+        "qid": "pub-068",
+        "qtype": "lookup",
+        "gold": [
+          "24"
+        ],
+        "agentic": "24",
+        "rag": "30",
+        "graphrag": "24"
+      },
+      {
+        "qid": "pub-069",
+        "qtype": "aggregation",
+        "gold": [
+          "3"
+        ],
+        "agentic": "3",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-070",
+        "qtype": "aggregation",
+        "gold": [
+          "3"
+        ],
+        "agentic": "3",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Answer: No new world or Olympic records were set during the 2010 Winter Olympics speed skating competitions."
+      },
+      {
+        "qid": "pub-071",
+        "qtype": "lookup",
+        "gold": [
+          "24"
+        ],
+        "agentic": "24",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "24"
+      },
+      {
+        "qid": "pub-072",
+        "qtype": "temporal",
+        "gold": [
+          "Lee Sang-hwa"
+        ],
+        "agentic": "Lee Sang-hwa",
+        "rag": "Lee Sang-hwa from South Korea won the gold medal in the women's 500 metres speed skating event at the 2014 Winter Olympics.",
+        "graphrag": "Lee Sang-hwa"
+      },
+      {
+        "qid": "pub-073",
+        "qtype": "multi_hop",
+        "gold": [
+          "Yang Ling"
+        ],
+        "agentic": "Yang Ling",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Yang Ling"
+      },
+      {
+        "qid": "pub-074",
+        "qtype": "lookup",
+        "gold": [
+          "17"
+        ],
+        "agentic": "17",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "17"
+      },
+      {
+        "qid": "pub-076",
+        "qtype": "multi_hop",
+        "gold": [
+          "Julia Mancuso"
+        ],
+        "agentic": "Julia Mancuso",
+        "rag": "Kjetil André Aamodt",
+        "graphrag": "Julia Mancuso"
+      },
+      {
+        "qid": "pub-077",
+        "qtype": "multi_hop",
+        "gold": [
+          "Kaillie Humphries"
+        ],
+        "agentic": "Kaillie Humphries",
+        "rag": "Kaillie Humphries of the United States won the gold medal in the women's monobob event held at Xiaohaituo Bobsleigh and Luge Track Beijing on 13, 14 February 2022.",
+        "graphrag": "Francesco Friedrich and Thorsten Margis"
+      },
+      {
+        "qid": "pub-078",
+        "qtype": "aggregation",
+        "gold": [
+          "7"
+        ],
+        "agentic": "7",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-079",
+        "qtype": "multi_hop",
+        "gold": [
+          "Leontien Zijlaard"
+        ],
+        "agentic": "Leontien Zijlaard",
+        "rag": "Jan Ullrich",
+        "graphrag": "Leontien Zijlaard"
+      },
+      {
+        "qid": "pub-080",
+        "qtype": "lookup",
+        "gold": [
+          "17"
+        ],
+        "agentic": "17",
+        "rag": "48",
+        "graphrag": "17"
+      },
+      {
+        "qid": "pub-081",
+        "qtype": "multi_hop",
+        "gold": [
+          "Guo Wenjun"
+        ],
+        "agentic": "Guo Wenjun",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Guo Wenjun"
+      },
+      {
+        "qid": "pub-082",
+        "qtype": "aggregation",
+        "gold": [
+          "12"
+        ],
+        "agentic": "12",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "The **women's 100 metre freestyle** event at the **1996 Summer Olympics** took place on **20 July 1996** at the **Georgia Tech Aquatic Center** in Atlanta, United States. \n\n### Key Details:\n- **Gold Medalist**: **Le Jingyi** (China) with a time of **54.50 seconds**.\n- **Silver Medalist**: **Sandra Völker** (Germany) with a time of **55.55 seconds**.\n- **Bronze Medalist**: **Angel Martino** (United States) with a time of **55.44 seconds**.\n- **Venue**: Georgia Tech Aquatic Center.\n- **Date**: 20 July 1996.\n- **Competitors**: 48 swimmers from 44 nations.\n- **Winning Time**: **54.50 seconds** (a new Olympic record).\n\n### Notable Information:\n- **Le Jingyi** won the gold medal, marking China's first victory in the women's 100 metre freestyle at the Olympics.\n- **Sandra Völker** and **Angel Martino** secured the silver and bronze"
+      },
+      {
+        "qid": "pub-084",
+        "qtype": "superlative",
+        "gold": [
+          "Fencing at the 1992 Summer Olympics – Men's épée"
+        ],
+        "agentic": "Fencing at the 1992 Summer Olympics – Men's épée",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "The men's team épée event had the highest number of competitors with 60."
+      },
+      {
+        "qid": "pub-085",
+        "qtype": "superlative",
+        "gold": [
+          "Sailing at the 2008 Summer Olympics – Men's 470"
+        ],
+        "agentic": "Sailing at the 2008 Summer Olympics – Men's 470",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Men's 470"
+      },
+      {
+        "qid": "pub-087",
+        "qtype": "aggregation",
+        "gold": [
+          "17"
+        ],
+        "agentic": "17",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-088",
+        "qtype": "superlative",
+        "gold": [
+          "Alpine skiing at the 1992 Winter Olympics – Men's giant slalom"
+        ],
+        "agentic": "Alpine skiing at the 1992 Winter Olympics – Men's giant slalom",
+        "rag": "The men's 15 kilometre freestyle pursuit in cross-country skiing at the 1992 Winter Olympics had the highest number of competitors with 102.",
+        "graphrag": "**Answer:**\n\nThe Women's combined competition of the 1992 Winter Olympics in Albertville was held at Meribel from February 12–13, 1992. It featured 40 competitors from 18 nations. The event consisted of a downhill and a slalom race, with the combined results determining the final standings.\n\n**Winning Points:**\n- **Gold:** Petra Kronberger (AUT) with a total time of **1:09.60** and **2.55** winning points.\n- **Silver:** Anita Wachter (AUT) with a total time of **1:09.51** and **19.39** winning points.\n- **Bronze:** Florence Masnada (FRA) with a total time of **1:10.01** and **21.38** winning points.\n\n**Key Competitors:**\n- **Chantal Bournissen (SUI)**, the defending world champion, finished 4th with a total time of **1:10.69** and **24.98** winning points.\n- **Anne Berge (SUI)** finished 5th with a total"
+      },
+      {
+        "qid": "pub-089",
+        "qtype": "aggregation",
+        "gold": [
+          "5"
+        ],
+        "agentic": "5",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-090",
+        "qtype": "temporal",
+        "gold": [
+          "Aslanbek Khushtov"
+        ],
+        "agentic": "Aslanbek Khushtov",
+        "rag": "Ghasem Rezaei",
+        "graphrag": "Aslanbek Khushtov"
+      },
+      {
+        "qid": "pub-091",
+        "qtype": "lookup",
+        "gold": [
+          "18"
+        ],
+        "agentic": "18",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "18"
+      },
+      {
+        "qid": "pub-092",
+        "qtype": "aggregation",
+        "gold": [
+          "6"
+        ],
+        "agentic": "6",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-093",
+        "qtype": "aggregation",
+        "gold": [
+          "4"
+        ],
+        "agentic": "4",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-094",
+        "qtype": "temporal",
+        "gold": [
+          "Oleg Kucherenko"
+        ],
+        "agentic": "Oleg Kucherenko",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Oleg Kucherenko"
+      },
+      {
+        "qid": "pub-096",
+        "qtype": "multi_hop",
+        "gold": [
+          "Fazliddin Gaibnazarov"
+        ],
+        "agentic": "Fazliddin Gaibnazarov",
+        "rag": "Answer: Fazliddin Gaibnazarov",
+        "graphrag": "Shakhobidin Zoirov"
+      },
+      {
+        "qid": "pub-097",
+        "qtype": "temporal",
+        "gold": [
+          "Yana Shemyakina"
+        ],
+        "agentic": "Yana Shemyakina",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Yana Shemyakina"
+      },
+      {
+        "qid": "pub-099",
+        "qtype": "multi_hop",
+        "gold": [
+          "Erik LesserDaniel BöhmArnd PeifferSimon Schempp"
+        ],
+        "agentic": "Erik LesserDaniel BöhmArnd PeifferSimon Schempp",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Erik LesserDaniel BöhmArnd PeifferSimon Schempp"
+      },
+      {
+        "qid": "pub-100",
+        "qtype": "temporal",
+        "gold": [
+          "Missy Franklin"
+        ],
+        "agentic": "Missy Franklin",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Missy Franklin"
+      }
+    ],
+    "beats_graphrag": [
+      {
+        "qid": "pub-001",
+        "qtype": "aggregation",
+        "gold": [
+          "5"
+        ],
+        "agentic": "5",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": ""
+      },
+      {
+        "qid": "pub-003",
+        "qtype": "aggregation",
+        "gold": [
+          "8"
+        ],
+        "agentic": "8",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-004",
+        "qtype": "superlative",
+        "gold": [
+          "Athletics at the 2008 Summer Olympics – Men's marathon"
+        ],
+        "agentic": "Athletics at the 2008 Summer Olympics – Men's marathon",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-008",
+        "qtype": "superlative",
+        "gold": [
+          "Sailing at the 2000 Summer Olympics – Soling"
+        ],
+        "agentic": "Sailing at the 2000 Summer Olympics – Soling",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Laser"
+      },
+      {
+        "qid": "pub-010",
+        "qtype": "aggregation",
+        "gold": [
+          "4"
+        ],
+        "agentic": "4",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-012",
+        "qtype": "aggregation",
+        "gold": [
+          "6"
+        ],
+        "agentic": "6",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "3"
+      },
+      {
+        "qid": "pub-014",
+        "qtype": "multi_hop",
+        "gold": [
+          "Carolina Marín"
+        ],
+        "agentic": "Carolina Marín",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Chen Long"
+      },
+      {
+        "qid": "pub-015",
+        "qtype": "multi_hop",
+        "gold": [
+          "Dani KingLaura TrottJoanna Rowsell"
+        ],
+        "agentic": "Dani KingLaura TrottJoanna Rowsell",
+        "rag": "The gold medal in the event held at London Velopark on 3 to 4 August at the 2012 Summer Olympics was won by Dani King, Laura Trott, and Joanna Rowsell representing Great Britain.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-016",
+        "qtype": "temporal",
+        "gold": [
+          "Arnd Peiffer"
+        ],
+        "agentic": "Arnd Peiffer",
+        "rag": "Ole Einar Bjørndalen",
+        "graphrag": ""
+      },
+      {
+        "qid": "pub-020",
+        "qtype": "aggregation",
+        "gold": [
+          "4"
+        ],
+        "agentic": "4",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": ""
+      },
+      {
+        "qid": "pub-021",
+        "qtype": "superlative",
+        "gold": [
+          "Alpine skiing at the 1988 Winter Olympics – Men's giant slalom"
+        ],
+        "agentic": "Alpine skiing at the 1988 Winter Olympics – Men's giant slalom",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "The Women's combined event at the 1988 Winter Olympics was held at Nakiska, with the following results:\n\n**Gold Medalist:**  \n- **Anita Wachter** (AUT) with a total time of **2:08.39** and a time difference of **+2.02**.\n\n**Silver Medalist:**  \n- **Brigitte Oertli** (SUI) with a total time of **2:08.77** and a time difference of **+2.40**.\n\n**Bronze Medalist:**  \n- **Maria Walliser** (SUI) with a total time of **2:08.92** and a time difference of **+2.55**.\n\n**Winning Points:**  \n- The winning points for the gold medal were **29.25**.\n\n**Key Notes:**  \n- The event took place on **February 20–21, 1988**.\n- The defending world champion in the combined event was **Erika Hess** of Switzerland, while **Brigitte Oertli** was the defending World Cup combined champion.\n- The competition involved **39 competitors** from **1"
+      },
+      {
+        "qid": "pub-024",
+        "qtype": "aggregation",
+        "gold": [
+          "3"
+        ],
+        "agentic": "3",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-027",
+        "qtype": "aggregation",
+        "gold": [
+          "4"
+        ],
+        "agentic": "4",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-033",
+        "qtype": "aggregation",
+        "gold": [
+          "4"
+        ],
+        "agentic": "4",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-037",
+        "qtype": "superlative",
+        "gold": [
+          "Shooting at the 2008 Summer Olympics – Men's 50 metre rifle prone"
+        ],
+        "agentic": "Shooting at the 2008 Summer Olympics – Men's 50 metre rifle prone",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "The Men's 10 metre air rifle event had the highest number of competitors with 51."
+      },
+      {
+        "qid": "pub-042",
+        "qtype": "lookup",
+        "gold": [
+          "47"
+        ],
+        "agentic": "47",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "**Answer:**\n\nKjetil André Aamodt won the **Men's Super-G** event at the **Albertville 1992 Winter Olympics**, held at **Val d'Isère, Face de Bellevarde**. He was the **Norwegian champion**, and Norway captured **three of the top four spots** in the competition, with **Jan Einar Thorsen** winning **bronze** and **Ole Kristian Furuseth** finishing **fourth**.\n\nIn the **Men's Giant Slalom** event at the **2002 Winter Olympics** in **Park City**, **Stephan Eberharter** of **Austria** won gold, becoming the **oldest man to win an alpine event at the Olympics**. **Bode Miller** of the **United States** won silver, and **Lasse Kjus** of **Norway** won bronze. **Kjetil André Aamodt** of **Norway** finished **7th** in this event.\n\nIn the **Men's Giant Slalom** event at the **2006 Winter Olympics** in **Sestriere**, **Benjamin Raich** of **Austria** won gold, **"
+      },
+      {
+        "qid": "pub-044",
+        "qtype": "superlative",
+        "gold": [
+          "Fencing at the 2008 Summer Olympics – Men's épée"
+        ],
+        "agentic": "Fencing at the 2008 Summer Olympics – Men's épée",
+        "rag": "The men's épée event at the 2008 Summer Olympics had the highest number of competitors with 41 competitors.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-045",
+        "qtype": "aggregation",
+        "gold": [
+          "20"
+        ],
+        "agentic": "20",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "3"
+      },
+      {
+        "qid": "pub-053",
+        "qtype": "superlative",
+        "gold": [
+          "Shooting at the 2016 Summer Olympics – Women's 10 metre air rifle"
+        ],
+        "agentic": "Shooting at the 2016 Summer Olympics – Women's 10 metre air rifle",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-058",
+        "qtype": "aggregation",
+        "gold": [
+          "5"
+        ],
+        "agentic": "5",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "3"
+      },
+      {
+        "qid": "pub-065",
+        "qtype": "aggregation",
+        "gold": [
+          "5"
+        ],
+        "agentic": "5",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-066",
+        "qtype": "superlative",
+        "gold": [
+          "Weightlifting at the 1992 Summer Olympics – Men's 75 kg"
+        ],
+        "agentic": "Weightlifting at the 1992 Summer Olympics – Men's 75 kg",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "The Men's 75 kg event had the highest number of competitors with 34."
+      },
+      {
+        "qid": "pub-069",
+        "qtype": "aggregation",
+        "gold": [
+          "3"
+        ],
+        "agentic": "3",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-070",
+        "qtype": "aggregation",
+        "gold": [
+          "3"
+        ],
+        "agentic": "3",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Answer: No new world or Olympic records were set during the 2010 Winter Olympics speed skating competitions."
+      },
+      {
+        "qid": "pub-077",
+        "qtype": "multi_hop",
+        "gold": [
+          "Kaillie Humphries"
+        ],
+        "agentic": "Kaillie Humphries",
+        "rag": "Kaillie Humphries of the United States won the gold medal in the women's monobob event held at Xiaohaituo Bobsleigh and Luge Track Beijing on 13, 14 February 2022.",
+        "graphrag": "Francesco Friedrich and Thorsten Margis"
+      },
+      {
+        "qid": "pub-078",
+        "qtype": "aggregation",
+        "gold": [
+          "7"
+        ],
+        "agentic": "7",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-082",
+        "qtype": "aggregation",
+        "gold": [
+          "12"
+        ],
+        "agentic": "12",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "The **women's 100 metre freestyle** event at the **1996 Summer Olympics** took place on **20 July 1996** at the **Georgia Tech Aquatic Center** in Atlanta, United States. \n\n### Key Details:\n- **Gold Medalist**: **Le Jingyi** (China) with a time of **54.50 seconds**.\n- **Silver Medalist**: **Sandra Völker** (Germany) with a time of **55.55 seconds**.\n- **Bronze Medalist**: **Angel Martino** (United States) with a time of **55.44 seconds**.\n- **Venue**: Georgia Tech Aquatic Center.\n- **Date**: 20 July 1996.\n- **Competitors**: 48 swimmers from 44 nations.\n- **Winning Time**: **54.50 seconds** (a new Olympic record).\n\n### Notable Information:\n- **Le Jingyi** won the gold medal, marking China's first victory in the women's 100 metre freestyle at the Olympics.\n- **Sandra Völker** and **Angel Martino** secured the silver and bronze"
+      },
+      {
+        "qid": "pub-084",
+        "qtype": "superlative",
+        "gold": [
+          "Fencing at the 1992 Summer Olympics – Men's épée"
+        ],
+        "agentic": "Fencing at the 1992 Summer Olympics – Men's épée",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "The men's team épée event had the highest number of competitors with 60."
+      },
+      {
+        "qid": "pub-085",
+        "qtype": "superlative",
+        "gold": [
+          "Sailing at the 2008 Summer Olympics – Men's 470"
+        ],
+        "agentic": "Sailing at the 2008 Summer Olympics – Men's 470",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Men's 470"
+      },
+      {
+        "qid": "pub-087",
+        "qtype": "aggregation",
+        "gold": [
+          "17"
+        ],
+        "agentic": "17",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-088",
+        "qtype": "superlative",
+        "gold": [
+          "Alpine skiing at the 1992 Winter Olympics – Men's giant slalom"
+        ],
+        "agentic": "Alpine skiing at the 1992 Winter Olympics – Men's giant slalom",
+        "rag": "The men's 15 kilometre freestyle pursuit in cross-country skiing at the 1992 Winter Olympics had the highest number of competitors with 102.",
+        "graphrag": "**Answer:**\n\nThe Women's combined competition of the 1992 Winter Olympics in Albertville was held at Meribel from February 12–13, 1992. It featured 40 competitors from 18 nations. The event consisted of a downhill and a slalom race, with the combined results determining the final standings.\n\n**Winning Points:**\n- **Gold:** Petra Kronberger (AUT) with a total time of **1:09.60** and **2.55** winning points.\n- **Silver:** Anita Wachter (AUT) with a total time of **1:09.51** and **19.39** winning points.\n- **Bronze:** Florence Masnada (FRA) with a total time of **1:10.01** and **21.38** winning points.\n\n**Key Competitors:**\n- **Chantal Bournissen (SUI)**, the defending world champion, finished 4th with a total time of **1:10.69** and **24.98** winning points.\n- **Anne Berge (SUI)** finished 5th with a total"
+      },
+      {
+        "qid": "pub-089",
+        "qtype": "aggregation",
+        "gold": [
+          "5"
+        ],
+        "agentic": "5",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-092",
+        "qtype": "aggregation",
+        "gold": [
+          "6"
+        ],
+        "agentic": "6",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-093",
+        "qtype": "aggregation",
+        "gold": [
+          "4"
+        ],
+        "agentic": "4",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context."
+      },
+      {
+        "qid": "pub-096",
+        "qtype": "multi_hop",
+        "gold": [
+          "Fazliddin Gaibnazarov"
+        ],
+        "agentic": "Fazliddin Gaibnazarov",
+        "rag": "Answer: Fazliddin Gaibnazarov",
+        "graphrag": "Shakhobidin Zoirov"
+      }
+    ],
+    "unnecessary": [
+      {
+        "qid": "pub-006",
+        "qtype": "temporal"
+      },
+      {
+        "qid": "pub-009",
+        "qtype": "lookup"
+      },
+      {
+        "qid": "pub-025",
+        "qtype": "lookup"
+      },
+      {
+        "qid": "pub-032",
+        "qtype": "lookup"
+      },
+      {
+        "qid": "pub-040",
+        "qtype": "temporal"
+      },
+      {
+        "qid": "pub-043",
+        "qtype": "multi_hop"
+      },
+      {
+        "qid": "pub-046",
+        "qtype": "lookup"
+      },
+      {
+        "qid": "pub-063",
+        "qtype": "lookup"
+      },
+      {
+        "qid": "pub-083",
+        "qtype": "multi_hop"
+      },
+      {
+        "qid": "pub-086",
+        "qtype": "multi_hop"
+      }
+    ],
+    "failed": [
+      {
+        "qid": "pub-022",
+        "qtype": "multi_hop",
+        "gold": [
+          "Ayumi Tanimoto"
+        ],
+        "agentic": "Insufficient evidence in the retrieved context.",
+        "rag": "Wu Jingyu",
+        "graphrag": "Insufficient evidence in the retrieved context.",
+        "stop_reason": "No useful next action remains.",
+        "kind": "venue_date",
+        "tools": [
+          "search_entities",
+          "search_events"
+        ]
+      },
+      {
+        "qid": "pub-038",
+        "qtype": "multi_hop",
+        "gold": [
+          "Pyrros Dimas"
+        ],
+        "agentic": "Audley Harrison",
+        "rag": "Audley Harrison",
+        "graphrag": "Audley Harrison",
+        "stop_reason": "No useful next action remains.",
+        "kind": "venue_date",
+        "tools": [
+          "search_entities",
+          "traverse_graph",
+          "retrieve_documents",
+          "retrieve_documents",
+          "traverse_graph",
+          "traverse_graph"
+        ]
+      },
+      {
+        "qid": "pub-051",
+        "qtype": "aggregation",
+        "gold": [
+          "6"
+        ],
+        "agentic": "Insufficient evidence in the retrieved context.",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Insufficient evidence in the retrieved context.",
+        "stop_reason": "maximum iteration limit",
+        "kind": "aggregation",
+        "tools": [
+          "search_events",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents"
+        ]
+      },
+      {
+        "qid": "pub-055",
+        "qtype": "temporal",
+        "gold": [
+          "Sebastián Crismanich"
+        ],
+        "agentic": "Carlo Molfetta",
+        "rag": "Steven López",
+        "graphrag": "Sebastián Crismanich",
+        "stop_reason": "sufficient evidence for an answer",
+        "kind": "temporal",
+        "tools": [
+          "search_entities",
+          "search_events",
+          "retrieve_documents"
+        ]
+      },
+      {
+        "qid": "pub-060",
+        "qtype": "multi_hop",
+        "gold": [
+          "Yana Shemyakina"
+        ],
+        "agentic": "Mansur Isaev",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "Mansur Isaev",
+        "stop_reason": "No useful next action remains.",
+        "kind": "venue_date",
+        "tools": [
+          "search_entities",
+          "traverse_graph",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph"
+        ]
+      },
+      {
+        "qid": "pub-075",
+        "qtype": "lookup",
+        "gold": [
+          "32"
+        ],
+        "agentic": "",
+        "rag": "Insufficient evidence in the retrieved context.",
+        "graphrag": "32",
+        "stop_reason": null,
+        "kind": null,
+        "tools": []
+      },
+      {
+        "qid": "pub-095",
+        "qtype": "multi_hop",
+        "gold": [
+          "Valerie Vili"
+        ],
+        "agentic": "Pamela Jelimo",
+        "rag": "Irving Saladino of Panama won the gold medal in the men's long jump event held at the Beijing Olympic Stadium on 16 August 2008.",
+        "graphrag": "Pamela Jelimo",
+        "stop_reason": "No useful next action remains.",
+        "kind": "venue_date",
+        "tools": [
+          "search_entities",
+          "traverse_graph",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph"
+        ]
+      },
+      {
+        "qid": "pub-098",
+        "qtype": "multi_hop",
+        "gold": [
+          "Bekzat Sattarkhanov"
+        ],
+        "agentic": "Isabel Fernández",
+        "rag": "Audley Harrison",
+        "graphrag": "Bekzat Sattarkhanov",
+        "stop_reason": "No useful next action remains.",
+        "kind": "venue_date",
+        "tools": [
+          "search_entities",
+          "traverse_graph",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "retrieve_documents",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph",
+          "traverse_graph"
+        ]
+      }
+    ]
+  },
+  "when_agent_needed": {
+    "by_qtype": {
+      "aggregation": {
+        "n": 21,
+        "all_correct": 0,
+        "agent_only": 19,
+        "agent_needed_vs_rag": 20,
+        "agent_needed_vs_graph": 19,
+        "graph_enough": 0,
+        "rag_enough": 0,
+        "all_failed": 1,
+        "agent_failed_graph_ok": 0
+      },
+      "temporal": {
+        "n": 22,
+        "all_correct": 2,
+        "agent_only": 1,
+        "agent_needed_vs_rag": 19,
+        "agent_needed_vs_graph": 1,
+        "graph_enough": 2,
+        "rag_enough": 0,
+        "all_failed": 0,
+        "agent_failed_graph_ok": 1
+      },
+      "superlative": {
+        "n": 10,
+        "all_correct": 0,
+        "agent_only": 10,
+        "agent_needed_vs_rag": 10,
+        "agent_needed_vs_graph": 10,
+        "graph_enough": 0,
+        "rag_enough": 0,
+        "all_failed": 0,
+        "agent_failed_graph_ok": 0
+      },
+      "multi_hop": {
+        "n": 28,
+        "all_correct": 3,
+        "agent_only": 4,
+        "agent_needed_vs_rag": 20,
+        "agent_needed_vs_graph": 4,
+        "graph_enough": 3,
+        "rag_enough": 0,
+        "all_failed": 4,
+        "agent_failed_graph_ok": 1
+      },
+      "lookup": {
+        "n": 19,
+        "all_correct": 5,
+        "agent_only": 1,
+        "agent_needed_vs_rag": 13,
+        "agent_needed_vs_graph": 1,
+        "graph_enough": 5,
+        "rag_enough": 0,
+        "all_failed": 0,
+        "agent_failed_graph_ok": 1
+      }
+    },
+    "examples": {
+      "aggregation": [
+        {
+          "qid": "pub-001",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-003",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-010",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-012",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-020",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-024",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-027",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-033",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-045",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-051",
+          "pattern": "all_failed"
+        },
+        {
+          "qid": "pub-058",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-065",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-069",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-070",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-078",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-082",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-087",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-089",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-092",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-093",
+          "pattern": "agent_only"
+        }
+      ],
+      "superlative": [
+        {
+          "qid": "pub-004",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-008",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-021",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-037",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-044",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-053",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-066",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-084",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-085",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-088",
+          "pattern": "agent_only"
+        }
+      ],
+      "temporal": [
+        {
+          "qid": "pub-006",
+          "pattern": "all_correct"
+        },
+        {
+          "qid": "pub-016",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-040",
+          "pattern": "all_correct"
+        },
+        {
+          "qid": "pub-055",
+          "pattern": "graph_enough_agent_failed"
+        }
+      ],
+      "lookup": [
+        {
+          "qid": "pub-009",
+          "pattern": "all_correct"
+        },
+        {
+          "qid": "pub-025",
+          "pattern": "all_correct"
+        },
+        {
+          "qid": "pub-032",
+          "pattern": "all_correct"
+        },
+        {
+          "qid": "pub-042",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-046",
+          "pattern": "all_correct"
+        },
+        {
+          "qid": "pub-063",
+          "pattern": "all_correct"
+        },
+        {
+          "qid": "pub-075",
+          "pattern": "graph_enough_agent_failed"
+        }
+      ],
+      "multi_hop": [
+        {
+          "qid": "pub-014",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-015",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-022",
+          "pattern": "all_failed"
+        },
+        {
+          "qid": "pub-038",
+          "pattern": "all_failed"
+        },
+        {
+          "qid": "pub-043",
+          "pattern": "all_correct"
+        },
+        {
+          "qid": "pub-060",
+          "pattern": "all_failed"
+        },
+        {
+          "qid": "pub-077",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-083",
+          "pattern": "all_correct"
+        },
+        {
+          "qid": "pub-086",
+          "pattern": "all_correct"
+        },
+        {
+          "qid": "pub-095",
+          "pattern": "all_failed"
+        },
+        {
+          "qid": "pub-096",
+          "pattern": "agent_only"
+        },
+        {
+          "qid": "pub-098",
+          "pattern": "graph_enough_agent_failed"
+        }
+      ]
+    }
+  },
+  "agentic_failure_categories": {
+    "success": 92,
+    "insufficient_evidence": 1,
+    "wrong_answer_with_gold_docs": 4,
+    "iteration_limit_no_answer": 1,
+    "wrong_answer_retrieval_miss": 1,
+    "timeout": 1
+  }
+}

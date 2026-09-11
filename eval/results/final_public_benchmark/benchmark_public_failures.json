@@ -1,0 +1,1664 @@
+{
+  "rag": [
+    {
+      "qid": "pub-001",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "5"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.0909,
+      "error": null,
+      "latency_sec": 322.79
+    },
+    {
+      "qid": "pub-002",
+      "qtype": "temporal",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Chen Ding"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 289.75
+    },
+    {
+      "qid": "pub-003",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "8"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.0588,
+      "error": null,
+      "latency_sec": 223.0
+    },
+    {
+      "qid": "pub-004",
+      "qtype": "superlative",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Athletics at the 2008 Summer Olympics – Men's marathon"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.0233,
+      "error": null,
+      "latency_sec": 261.14
+    },
+    {
+      "qid": "pub-005",
+      "qtype": "multi_hop",
+      "predicted_answer": "Miloslav Mečíř",
+      "gold_answer": [
+        "Naim Süleymanoğlu"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 237.12
+    },
+    {
+      "qid": "pub-007",
+      "qtype": "temporal",
+      "predicted_answer": "Sergey Bubka",
+      "gold_answer": [
+        "Renaud Lavillenie"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 253.21
+    },
+    {
+      "qid": "pub-008",
+      "qtype": "superlative",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Sailing at the 2000 Summer Olympics – Soling"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 204.97
+    },
+    {
+      "qid": "pub-010",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "4"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 280.56
+    },
+    {
+      "qid": "pub-011",
+      "qtype": "multi_hop",
+      "predicted_answer": "Lee Seung-hoon",
+      "gold_answer": [
+        "Martina Sáblíková"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 410.58
+    },
+    {
+      "qid": "pub-012",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "6"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.2857,
+      "error": null,
+      "latency_sec": 319.8
+    },
+    {
+      "qid": "pub-013",
+      "qtype": "temporal",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Allison Schmitt"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 276.77
+    },
+    {
+      "qid": "pub-014",
+      "qtype": "multi_hop",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Carolina Marín"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 262.6
+    },
+    {
+      "qid": "pub-015",
+      "qtype": "multi_hop",
+      "predicted_answer": "The gold medal in the event held at London Velopark on 3 to 4 August at the 2012 Summer Olympics was won by Dani King, Laura Trott, and Joanna Rowsell representing Great Britain.",
+      "gold_answer": [
+        "Dani KingLaura TrottJoanna Rowsell"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 254.33
+    },
+    {
+      "qid": "pub-016",
+      "qtype": "temporal",
+      "predicted_answer": "Ole Einar Bjørndalen",
+      "gold_answer": [
+        "Arnd Peiffer"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 262.27
+    },
+    {
+      "qid": "pub-017",
+      "qtype": "multi_hop",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Yi Siling"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 239.58
+    },
+    {
+      "qid": "pub-018",
+      "qtype": "temporal",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Kevin Jackson"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 303.87
+    },
+    {
+      "qid": "pub-019",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "3"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.125,
+      "error": null,
+      "latency_sec": 219.45
+    },
+    {
+      "qid": "pub-020",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "4"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.1,
+      "error": null,
+      "latency_sec": 292.35
+    },
+    {
+      "qid": "pub-021",
+      "qtype": "superlative",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Alpine skiing at the 1988 Winter Olympics – Men's giant slalom"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 281.08
+    },
+    {
+      "qid": "pub-022",
+      "qtype": "multi_hop",
+      "predicted_answer": "Wu Jingyu",
+      "gold_answer": [
+        "Ayumi Tanimoto"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 258.62
+    },
+    {
+      "qid": "pub-023",
+      "qtype": "multi_hop",
+      "predicted_answer": "Kevin Young",
+      "gold_answer": [
+        "Hwang Young-Cho"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 278.39
+    },
+    {
+      "qid": "pub-024",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "3"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 250.93
+    },
+    {
+      "qid": "pub-026",
+      "qtype": "temporal",
+      "predicted_answer": "Greg Van Avermaet",
+      "gold_answer": [
+        "Jaroslav Kulhavý"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 265.69
+    },
+    {
+      "qid": "pub-027",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "4"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.1,
+      "error": null,
+      "latency_sec": 257.65
+    },
+    {
+      "qid": "pub-028",
+      "qtype": "multi_hop",
+      "predicted_answer": "Answer: Michael Phelps",
+      "gold_answer": [
+        "Michael Phelps"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 267.28
+    },
+    {
+      "qid": "pub-029",
+      "qtype": "lookup",
+      "predicted_answer": "41",
+      "gold_answer": [
+        "28"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 267.14
+    },
+    {
+      "qid": "pub-030",
+      "qtype": "multi_hop",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Emese Szász"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 382.04
+    },
+    {
+      "qid": "pub-031",
+      "qtype": "multi_hop",
+      "predicted_answer": "Liu Chunhong",
+      "gold_answer": [
+        "Dmitry Berestov"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 253.48
+    },
+    {
+      "qid": "pub-033",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "4"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.1429,
+      "error": null,
+      "latency_sec": 240.7
+    },
+    {
+      "qid": "pub-034",
+      "qtype": "lookup",
+      "predicted_answer": "20",
+      "gold_answer": [
+        "23"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 244.57
+    },
+    {
+      "qid": "pub-035",
+      "qtype": "lookup",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "30"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 231.07
+    },
+    {
+      "qid": "pub-036",
+      "qtype": "temporal",
+      "predicted_answer": "Hasanboy Dusmatov from Uzbekistan won the gold medal.",
+      "gold_answer": [
+        "Zou Shiming"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.5,
+      "error": null,
+      "latency_sec": 212.91
+    },
+    {
+      "qid": "pub-037",
+      "qtype": "superlative",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Shooting at the 2008 Summer Olympics – Men's 50 metre rifle prone"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.1429,
+      "error": null,
+      "latency_sec": 229.77
+    },
+    {
+      "qid": "pub-038",
+      "qtype": "multi_hop",
+      "predicted_answer": "Audley Harrison",
+      "gold_answer": [
+        "Pyrros Dimas"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 215.34
+    },
+    {
+      "qid": "pub-039",
+      "qtype": "temporal",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Sandra Perković"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 223.46
+    },
+    {
+      "qid": "pub-041",
+      "qtype": "multi_hop",
+      "predicted_answer": "Tony Yoka",
+      "gold_answer": [
+        "Nino Schurter"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 272.68
+    },
+    {
+      "qid": "pub-042",
+      "qtype": "lookup",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "47"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 261.6
+    },
+    {
+      "qid": "pub-044",
+      "qtype": "superlative",
+      "predicted_answer": "The men's épée event at the 2008 Summer Olympics had the highest number of competitors with 41 competitors.",
+      "gold_answer": [
+        "Fencing at the 2008 Summer Olympics – Men's épée"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.2,
+      "error": null,
+      "latency_sec": 240.53
+    },
+    {
+      "qid": "pub-045",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "20"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.0233,
+      "error": null,
+      "latency_sec": 240.0
+    },
+    {
+      "qid": "pub-047",
+      "qtype": "lookup",
+      "predicted_answer": "32",
+      "gold_answer": [
+        "24"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 252.16
+    },
+    {
+      "qid": "pub-048",
+      "qtype": "temporal",
+      "predicted_answer": "Hadi Saei",
+      "gold_answer": [
+        "Servet Tazegül"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.5,
+      "error": null,
+      "latency_sec": 225.62
+    },
+    {
+      "qid": "pub-049",
+      "qtype": "temporal",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Martin Fourcade"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 237.97
+    },
+    {
+      "qid": "pub-050",
+      "qtype": "multi_hop",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Lee Sang-hwa"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 231.38
+    },
+    {
+      "qid": "pub-051",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "6"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 224.29
+    },
+    {
+      "qid": "pub-052",
+      "qtype": "lookup",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "20"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 271.14
+    },
+    {
+      "qid": "pub-053",
+      "qtype": "superlative",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Shooting at the 2016 Summer Olympics – Women's 10 metre air rifle"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.0714,
+      "error": null,
+      "latency_sec": 255.91
+    },
+    {
+      "qid": "pub-054",
+      "qtype": "lookup",
+      "predicted_answer": "26",
+      "gold_answer": [
+        "24"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 257.64
+    },
+    {
+      "qid": "pub-055",
+      "qtype": "temporal",
+      "predicted_answer": "Steven López",
+      "gold_answer": [
+        "Sebastián Crismanich"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.5,
+      "error": null,
+      "latency_sec": 228.03
+    },
+    {
+      "qid": "pub-056",
+      "qtype": "temporal",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Yevgeny Dementyev"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 232.3
+    },
+    {
+      "qid": "pub-057",
+      "qtype": "temporal",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Allyson Felix"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 235.18
+    },
+    {
+      "qid": "pub-058",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "5"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 188.74
+    },
+    {
+      "qid": "pub-059",
+      "qtype": "temporal",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Laura Dahlmeier"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 248.45
+    },
+    {
+      "qid": "pub-060",
+      "qtype": "multi_hop",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Yana Shemyakina"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 227.23
+    },
+    {
+      "qid": "pub-061",
+      "qtype": "lookup",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "34"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 196.26
+    },
+    {
+      "qid": "pub-062",
+      "qtype": "temporal",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Tirunesh Dibaba"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 236.22
+    },
+    {
+      "qid": "pub-064",
+      "qtype": "multi_hop",
+      "predicted_answer": "Szymon Ziółkowski",
+      "gold_answer": [
+        "Gabriela Szabo"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 211.15
+    },
+    {
+      "qid": "pub-065",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "5"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.1818,
+      "error": null,
+      "latency_sec": 207.11
+    },
+    {
+      "qid": "pub-066",
+      "qtype": "superlative",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Weightlifting at the 1992 Summer Olympics – Men's 75 kg"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 214.42
+    },
+    {
+      "qid": "pub-067",
+      "qtype": "multi_hop",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Rosannagh MacLennan"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 187.34
+    },
+    {
+      "qid": "pub-068",
+      "qtype": "lookup",
+      "predicted_answer": "30",
+      "gold_answer": [
+        "24"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 202.41
+    },
+    {
+      "qid": "pub-069",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "3"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.3,
+      "error": null,
+      "latency_sec": 270.48
+    },
+    {
+      "qid": "pub-070",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "3"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 213.7
+    },
+    {
+      "qid": "pub-071",
+      "qtype": "lookup",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "24"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 207.55
+    },
+    {
+      "qid": "pub-072",
+      "qtype": "temporal",
+      "predicted_answer": "Lee Sang-hwa from South Korea won the gold medal in the women's 500 metres speed skating event at the 2014 Winter Olympics.",
+      "gold_answer": [
+        "Lee Sang-hwa"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.5,
+      "error": null,
+      "latency_sec": 223.75
+    },
+    {
+      "qid": "pub-073",
+      "qtype": "multi_hop",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Yang Ling"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 174.84
+    },
+    {
+      "qid": "pub-074",
+      "qtype": "lookup",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "17"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 222.64
+    },
+    {
+      "qid": "pub-075",
+      "qtype": "lookup",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "32"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 229.35
+    },
+    {
+      "qid": "pub-076",
+      "qtype": "multi_hop",
+      "predicted_answer": "Kjetil André Aamodt",
+      "gold_answer": [
+        "Julia Mancuso"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 183.43
+    },
+    {
+      "qid": "pub-077",
+      "qtype": "multi_hop",
+      "predicted_answer": "Kaillie Humphries of the United States won the gold medal in the women's monobob event held at Xiaohaituo Bobsleigh and Luge Track Beijing on 13, 14 February 2022.",
+      "gold_answer": [
+        "Kaillie Humphries"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 210.41
+    },
+    {
+      "qid": "pub-078",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "7"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 135.71
+    },
+    {
+      "qid": "pub-079",
+      "qtype": "multi_hop",
+      "predicted_answer": "Jan Ullrich",
+      "gold_answer": [
+        "Leontien Zijlaard"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 203.38
+    },
+    {
+      "qid": "pub-080",
+      "qtype": "lookup",
+      "predicted_answer": "48",
+      "gold_answer": [
+        "17"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 177.54
+    },
+    {
+      "qid": "pub-081",
+      "qtype": "multi_hop",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Guo Wenjun"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 204.59
+    },
+    {
+      "qid": "pub-082",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "12"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.0385,
+      "error": null,
+      "latency_sec": 167.05
+    },
+    {
+      "qid": "pub-084",
+      "qtype": "superlative",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Fencing at the 1992 Summer Olympics – Men's épée"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 194.25
+    },
+    {
+      "qid": "pub-085",
+      "qtype": "superlative",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Sailing at the 2008 Summer Olympics – Men's 470"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 154.66
+    },
+    {
+      "qid": "pub-087",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "17"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.0789,
+      "error": null,
+      "latency_sec": 210.85
+    },
+    {
+      "qid": "pub-088",
+      "qtype": "superlative",
+      "predicted_answer": "The men's 15 kilometre freestyle pursuit in cross-country skiing at the 1992 Winter Olympics had the highest number of competitors with 102.",
+      "gold_answer": [
+        "Alpine skiing at the 1992 Winter Olympics – Men's giant slalom"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 259.79
+    },
+    {
+      "qid": "pub-089",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "5"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 238.39
+    },
+    {
+      "qid": "pub-090",
+      "qtype": "temporal",
+      "predicted_answer": "Ghasem Rezaei",
+      "gold_answer": [
+        "Aslanbek Khushtov"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.5,
+      "error": null,
+      "latency_sec": 265.02
+    },
+    {
+      "qid": "pub-091",
+      "qtype": "lookup",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "18"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 368.14
+    },
+    {
+      "qid": "pub-092",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "6"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 219.89
+    },
+    {
+      "qid": "pub-093",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "4"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.1111,
+      "error": null,
+      "latency_sec": 256.41
+    },
+    {
+      "qid": "pub-094",
+      "qtype": "temporal",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Oleg Kucherenko"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 309.3
+    },
+    {
+      "qid": "pub-095",
+      "qtype": "multi_hop",
+      "predicted_answer": "Irving Saladino of Panama won the gold medal in the men's long jump event held at the Beijing Olympic Stadium on 16 August 2008.",
+      "gold_answer": [
+        "Valerie Vili"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 260.86
+    },
+    {
+      "qid": "pub-096",
+      "qtype": "multi_hop",
+      "predicted_answer": "Answer: Fazliddin Gaibnazarov",
+      "gold_answer": [
+        "Fazliddin Gaibnazarov"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 284.62
+    },
+    {
+      "qid": "pub-097",
+      "qtype": "temporal",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Yana Shemyakina"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 289.97
+    },
+    {
+      "qid": "pub-098",
+      "qtype": "multi_hop",
+      "predicted_answer": "Audley Harrison",
+      "gold_answer": [
+        "Bekzat Sattarkhanov"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 265.21
+    },
+    {
+      "qid": "pub-099",
+      "qtype": "multi_hop",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Erik LesserDaniel BöhmArnd PeifferSimon Schempp"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 285.15
+    },
+    {
+      "qid": "pub-100",
+      "qtype": "temporal",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Missy Franklin"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 298.62
+    }
+  ],
+  "graphrag": [
+    {
+      "qid": "pub-001",
+      "qtype": "aggregation",
+      "predicted_answer": "",
+      "gold_answer": [
+        "5"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": "timeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)\nTraceback (most recent call last):\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\connectionpool.py\", line 534, in _make_request\n    response = conn.getresponse()\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\connection.py\", line 571, in getresponse\n    httplib_response = super().getresponse()\n  File \"C:\\Users\\patil\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\http\\client.py\", line 1478, in getresponse\n    response.begin()\n    ~~~~~~~~~~~~~~^^\n  File \"C:\\Users\\patil\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\http\\client.py\", line 343, in begin\n    version, status, reason = self._read_status()\n                              ~~~~~~~~~~~~~~~~~^^\nTimeoutError: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\requests\\adapters.py\", line 696, in send\n    resp = conn.urlopen(\n        method=request.method,\n    ...<9 lines>...\n        chunked=chunked,\n    )\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\connectionpool.py\", line 842, in urlopen\n    retries = retries.increment(\n        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]\n    )\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\util\\retry.py\", line 498, in increment\n    raise reraise(type(error), error, _stacktrace)\n          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\util\\util.py\", line 39, in reraise\n    raise value\nurllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\patil\\agentic-graphrag\\eval\\run_public_final.py\", line 354, in run_one\n    return RUNNERS[pipeline](question)\n           ~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"C:\\Users\\patil\\agentic-graphrag\\eval\\run_public_final.py\", line 262, in run_graphrag\n    answer = ask_ollama(question, context) or INSUFFICIENT_EVIDENCE\n             ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\patil\\agentic-graphrag\\rag\\pipeline.py\", line 65, in ask_ollama\n    response = requests.post(\n        f\"{OLLAMA_BASE_URL}/api/generate\",\n        json=payload,\n        timeout=600,\n    )\n  File \"C:\\Users\\patil\\agentic-graphrag\\eval\\run_public_final.py\", line 60, in _capturing_post\n    response = _ORIG_POST(*args, **kwargs)\nrequests.exceptions.ReadTimeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)\n",
+      "latency_sec": 605.86
+    },
+    {
+      "qid": "pub-003",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "8"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.4706,
+      "error": null,
+      "latency_sec": 442.6
+    },
+    {
+      "qid": "pub-004",
+      "qtype": "superlative",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Athletics at the 2008 Summer Olympics – Men's marathon"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.186,
+      "error": null,
+      "latency_sec": 512.68
+    },
+    {
+      "qid": "pub-008",
+      "qtype": "superlative",
+      "predicted_answer": "Laser",
+      "gold_answer": [
+        "Sailing at the 2000 Summer Olympics – Soling"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 554.37
+    },
+    {
+      "qid": "pub-010",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "4"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.7,
+      "error": null,
+      "latency_sec": 510.11
+    },
+    {
+      "qid": "pub-012",
+      "qtype": "aggregation",
+      "predicted_answer": "3",
+      "gold_answer": [
+        "6"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.5714,
+      "error": null,
+      "latency_sec": 498.13
+    },
+    {
+      "qid": "pub-014",
+      "qtype": "multi_hop",
+      "predicted_answer": "Chen Long",
+      "gold_answer": [
+        "Carolina Marín"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 519.08
+    },
+    {
+      "qid": "pub-015",
+      "qtype": "multi_hop",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Dani KingLaura TrottJoanna Rowsell"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 445.75
+    },
+    {
+      "qid": "pub-016",
+      "qtype": "temporal",
+      "predicted_answer": "",
+      "gold_answer": [
+        "Arnd Peiffer"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": "timeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)\nTraceback (most recent call last):\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\connectionpool.py\", line 534, in _make_request\n    response = conn.getresponse()\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\connection.py\", line 571, in getresponse\n    httplib_response = super().getresponse()\n  File \"C:\\Users\\patil\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\http\\client.py\", line 1478, in getresponse\n    response.begin()\n    ~~~~~~~~~~~~~~^^\n  File \"C:\\Users\\patil\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\http\\client.py\", line 343, in begin\n    version, status, reason = self._read_status()\n                              ~~~~~~~~~~~~~~~~~^^\nTimeoutError: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\requests\\adapters.py\", line 696, in send\n    resp = conn.urlopen(\n        method=request.method,\n    ...<9 lines>...\n        chunked=chunked,\n    )\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\connectionpool.py\", line 842, in urlopen\n    retries = retries.increment(\n        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]\n    )\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\util\\retry.py\", line 498, in increment\n    raise reraise(type(error), error, _stacktrace)\n          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\util\\util.py\", line 39, in reraise\n    raise value\nurllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\patil\\agentic-graphrag\\eval\\run_public_final.py\", line 354, in run_one\n    return RUNNERS[pipeline](question)\n           ~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"C:\\Users\\patil\\agentic-graphrag\\eval\\run_public_final.py\", line 262, in run_graphrag\n    answer = ask_ollama(question, context) or INSUFFICIENT_EVIDENCE\n             ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\patil\\agentic-graphrag\\rag\\pipeline.py\", line 65, in ask_ollama\n    response = requests.post(\n        f\"{OLLAMA_BASE_URL}/api/generate\",\n        json=payload,\n        timeout=600,\n    )\n  File \"C:\\Users\\patil\\agentic-graphrag\\eval\\run_public_final.py\", line 60, in _capturing_post\n    response = _ORIG_POST(*args, **kwargs)\nrequests.exceptions.ReadTimeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)\n",
+      "latency_sec": 2235.78
+    },
+    {
+      "qid": "pub-020",
+      "qtype": "aggregation",
+      "predicted_answer": "",
+      "gold_answer": [
+        "4"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": "timeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)\nTraceback (most recent call last):\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\connectionpool.py\", line 534, in _make_request\n    response = conn.getresponse()\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\connection.py\", line 571, in getresponse\n    httplib_response = super().getresponse()\n  File \"C:\\Users\\patil\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\http\\client.py\", line 1478, in getresponse\n    response.begin()\n    ~~~~~~~~~~~~~~^^\n  File \"C:\\Users\\patil\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\http\\client.py\", line 343, in begin\n    version, status, reason = self._read_status()\n                              ~~~~~~~~~~~~~~~~~^^\nTimeoutError: timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\requests\\adapters.py\", line 696, in send\n    resp = conn.urlopen(\n        method=request.method,\n    ...<9 lines>...\n        chunked=chunked,\n    )\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\connectionpool.py\", line 842, in urlopen\n    retries = retries.increment(\n        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]\n    )\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\util\\retry.py\", line 498, in increment\n    raise reraise(type(error), error, _stacktrace)\n          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\patil\\agentic-graphrag\\.venv\\Lib\\site-packages\\urllib3\\util\\util.py\", line 39, in reraise\n    raise value\nurllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\patil\\agentic-graphrag\\eval\\run_public_final.py\", line 354, in run_one\n    return RUNNERS[pipeline](question)\n           ~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"C:\\Users\\patil\\agentic-graphrag\\eval\\run_public_final.py\", line 262, in run_graphrag\n    answer = ask_ollama(question, context) or INSUFFICIENT_EVIDENCE\n             ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\patil\\agentic-graphrag\\rag\\pipeline.py\", line 65, in ask_ollama\n    response = requests.post(\n        f\"{OLLAMA_BASE_URL}/api/generate\",\n        json=payload,\n        timeout=600,\n    )\n  File \"C:\\Users\\patil\\agentic-graphrag\\eval\\run_public_final.py\", line 60, in _capturing_post\n    response = _ORIG_POST(*args, **kwargs)\nrequests.exceptions.ReadTimeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=600)\n",
+      "latency_sec": 610.96
+    },
+    {
+      "qid": "pub-021",
+      "qtype": "superlative",
+      "predicted_answer": "The Women's combined event at the 1988 Winter Olympics was held at Nakiska, with the following results:\n\n**Gold Medalist:**  \n- **Anita Wachter** (AUT) with a total time of **2:08.39** and a time difference of **+2.02**.\n\n**Silver Medalist:**  \n- **Brigitte Oertli** (SUI) with a total time of **2:08.77** and a time difference of **+2.40**.\n\n**Bronze Medalist:**  \n- **Maria Walliser** (SUI) with a total time of **2:08.92** and a time difference of **+2.55**.\n\n**Winning Points:**  \n- The winning points for the gold medal were **29.25**.\n\n**Key Notes:**  \n- The event took place on **February 20–21, 1988**.\n- The defending world champion in the combined event was **Erika Hess** of Switzerland, while **Brigitte Oertli** was the defending World Cup combined champion.\n- The competition involved **39 competitors** from **1",
+      "gold_answer": [
+        "Alpine skiing at the 1988 Winter Olympics – Men's giant slalom"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.8,
+      "error": null,
+      "latency_sec": 412.7
+    },
+    {
+      "qid": "pub-022",
+      "qtype": "multi_hop",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Ayumi Tanimoto"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 0.14
+    },
+    {
+      "qid": "pub-024",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "3"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 436.03
+    },
+    {
+      "qid": "pub-027",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "4"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.8,
+      "error": null,
+      "latency_sec": 445.59
+    },
+    {
+      "qid": "pub-033",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "4"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.5714,
+      "error": null,
+      "latency_sec": 416.06
+    },
+    {
+      "qid": "pub-037",
+      "qtype": "superlative",
+      "predicted_answer": "The Men's 10 metre air rifle event had the highest number of competitors with 51.",
+      "gold_answer": [
+        "Shooting at the 2008 Summer Olympics – Men's 50 metre rifle prone"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.5714,
+      "error": null,
+      "latency_sec": 411.23
+    },
+    {
+      "qid": "pub-038",
+      "qtype": "multi_hop",
+      "predicted_answer": "Audley Harrison",
+      "gold_answer": [
+        "Pyrros Dimas"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 95.62
+    },
+    {
+      "qid": "pub-042",
+      "qtype": "lookup",
+      "predicted_answer": "**Answer:**\n\nKjetil André Aamodt won the **Men's Super-G** event at the **Albertville 1992 Winter Olympics**, held at **Val d'Isère, Face de Bellevarde**. He was the **Norwegian champion**, and Norway captured **three of the top four spots** in the competition, with **Jan Einar Thorsen** winning **bronze** and **Ole Kristian Furuseth** finishing **fourth**.\n\nIn the **Men's Giant Slalom** event at the **2002 Winter Olympics** in **Park City**, **Stephan Eberharter** of **Austria** won gold, becoming the **oldest man to win an alpine event at the Olympics**. **Bode Miller** of the **United States** won silver, and **Lasse Kjus** of **Norway** won bronze. **Kjetil André Aamodt** of **Norway** finished **7th** in this event.\n\nIn the **Men's Giant Slalom** event at the **2006 Winter Olympics** in **Sestriere**, **Benjamin Raich** of **Austria** won gold, **",
+      "gold_answer": [
+        "47"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 373.74
+    },
+    {
+      "qid": "pub-044",
+      "qtype": "superlative",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Fencing at the 2008 Summer Olympics – Men's épée"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.8,
+      "error": null,
+      "latency_sec": 394.35
+    },
+    {
+      "qid": "pub-045",
+      "qtype": "aggregation",
+      "predicted_answer": "3",
+      "gold_answer": [
+        "20"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.186,
+      "error": null,
+      "latency_sec": 385.66
+    },
+    {
+      "qid": "pub-051",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "6"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.5,
+      "error": null,
+      "latency_sec": 451.11
+    },
+    {
+      "qid": "pub-053",
+      "qtype": "superlative",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Shooting at the 2016 Summer Olympics – Women's 10 metre air rifle"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.5714,
+      "error": null,
+      "latency_sec": 429.4
+    },
+    {
+      "qid": "pub-058",
+      "qtype": "aggregation",
+      "predicted_answer": "3",
+      "gold_answer": [
+        "5"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.6667,
+      "error": null,
+      "latency_sec": 476.81
+    },
+    {
+      "qid": "pub-060",
+      "qtype": "multi_hop",
+      "predicted_answer": "Mansur Isaev",
+      "gold_answer": [
+        "Yana Shemyakina"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 430.83
+    },
+    {
+      "qid": "pub-065",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "5"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.7273,
+      "error": null,
+      "latency_sec": 425.67
+    },
+    {
+      "qid": "pub-066",
+      "qtype": "superlative",
+      "predicted_answer": "The Men's 75 kg event had the highest number of competitors with 34.",
+      "gold_answer": [
+        "Weightlifting at the 1992 Summer Olympics – Men's 75 kg"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.8,
+      "error": null,
+      "latency_sec": 427.83
+    },
+    {
+      "qid": "pub-069",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "3"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.8,
+      "error": null,
+      "latency_sec": 376.32
+    },
+    {
+      "qid": "pub-070",
+      "qtype": "aggregation",
+      "predicted_answer": "Answer: No new world or Olympic records were set during the 2010 Winter Olympics speed skating competitions.",
+      "gold_answer": [
+        "3"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.8,
+      "error": null,
+      "latency_sec": 240.61
+    },
+    {
+      "qid": "pub-077",
+      "qtype": "multi_hop",
+      "predicted_answer": "Francesco Friedrich and Thorsten Margis",
+      "gold_answer": [
+        "Kaillie Humphries"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 183.69
+    },
+    {
+      "qid": "pub-078",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "7"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.5,
+      "error": null,
+      "latency_sec": 429.76
+    },
+    {
+      "qid": "pub-082",
+      "qtype": "aggregation",
+      "predicted_answer": "The **women's 100 metre freestyle** event at the **1996 Summer Olympics** took place on **20 July 1996** at the **Georgia Tech Aquatic Center** in Atlanta, United States. \n\n### Key Details:\n- **Gold Medalist**: **Le Jingyi** (China) with a time of **54.50 seconds**.\n- **Silver Medalist**: **Sandra Völker** (Germany) with a time of **55.55 seconds**.\n- **Bronze Medalist**: **Angel Martino** (United States) with a time of **55.44 seconds**.\n- **Venue**: Georgia Tech Aquatic Center.\n- **Date**: 20 July 1996.\n- **Competitors**: 48 swimmers from 44 nations.\n- **Winning Time**: **54.50 seconds** (a new Olympic record).\n\n### Notable Information:\n- **Le Jingyi** won the gold medal, marking China's first victory in the women's 100 metre freestyle at the Olympics.\n- **Sandra Völker** and **Angel Martino** secured the silver and bronze",
+      "gold_answer": [
+        "12"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.3077,
+      "error": null,
+      "latency_sec": 340.93
+    },
+    {
+      "qid": "pub-084",
+      "qtype": "superlative",
+      "predicted_answer": "The men's team épée event had the highest number of competitors with 60.",
+      "gold_answer": [
+        "Fencing at the 1992 Summer Olympics – Men's épée"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 411.25
+    },
+    {
+      "qid": "pub-085",
+      "qtype": "superlative",
+      "predicted_answer": "Men's 470",
+      "gold_answer": [
+        "Sailing at the 2008 Summer Olympics – Men's 470"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.7273,
+      "error": null,
+      "latency_sec": 411.47
+    },
+    {
+      "qid": "pub-087",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "17"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.2105,
+      "error": null,
+      "latency_sec": 374.22
+    },
+    {
+      "qid": "pub-088",
+      "qtype": "superlative",
+      "predicted_answer": "**Answer:**\n\nThe Women's combined competition of the 1992 Winter Olympics in Albertville was held at Meribel from February 12–13, 1992. It featured 40 competitors from 18 nations. The event consisted of a downhill and a slalom race, with the combined results determining the final standings.\n\n**Winning Points:**\n- **Gold:** Petra Kronberger (AUT) with a total time of **1:09.60** and **2.55** winning points.\n- **Silver:** Anita Wachter (AUT) with a total time of **1:09.51** and **19.39** winning points.\n- **Bronze:** Florence Masnada (FRA) with a total time of **1:10.01** and **21.38** winning points.\n\n**Key Competitors:**\n- **Chantal Bournissen (SUI)**, the defending world champion, finished 4th with a total time of **1:10.69** and **24.98** winning points.\n- **Anne Berge (SUI)** finished 5th with a total",
+      "gold_answer": [
+        "Alpine skiing at the 1992 Winter Olympics – Men's giant slalom"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.8,
+      "error": null,
+      "latency_sec": 434.82
+    },
+    {
+      "qid": "pub-089",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "5"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.6667,
+      "error": null,
+      "latency_sec": 577.22
+    },
+    {
+      "qid": "pub-092",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "6"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.6154,
+      "error": null,
+      "latency_sec": 539.38
+    },
+    {
+      "qid": "pub-093",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "4"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 0.8889,
+      "error": null,
+      "latency_sec": 570.89
+    },
+    {
+      "qid": "pub-095",
+      "qtype": "multi_hop",
+      "predicted_answer": "Pamela Jelimo",
+      "gold_answer": [
+        "Valerie Vili"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 480.43
+    },
+    {
+      "qid": "pub-096",
+      "qtype": "multi_hop",
+      "predicted_answer": "Shakhobidin Zoirov",
+      "gold_answer": [
+        "Fazliddin Gaibnazarov"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 270.87
+    }
+  ],
+  "agentic": [
+    {
+      "qid": "pub-022",
+      "qtype": "multi_hop",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "Ayumi Tanimoto"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 0.06
+    },
+    {
+      "qid": "pub-038",
+      "qtype": "multi_hop",
+      "predicted_answer": "Audley Harrison",
+      "gold_answer": [
+        "Pyrros Dimas"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 0.87
+    },
+    {
+      "qid": "pub-051",
+      "qtype": "aggregation",
+      "predicted_answer": "Insufficient evidence in the retrieved context.",
+      "gold_answer": [
+        "6"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 3.28
+    },
+    {
+      "qid": "pub-055",
+      "qtype": "temporal",
+      "predicted_answer": "Carlo Molfetta",
+      "gold_answer": [
+        "Sebastián Crismanich"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": null,
+      "latency_sec": 0.05
+    },
+    {
+      "qid": "pub-060",
+      "qtype": "multi_hop",
+      "predicted_answer": "Mansur Isaev",
+      "gold_answer": [
+        "Yana Shemyakina"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 1.34
+    },
+    {
+      "qid": "pub-075",
+      "qtype": "lookup",
+      "predicted_answer": "",
+      "gold_answer": [
+        "32"
+      ],
+      "gold_doc_retrieved": false,
+      "retrieval_completeness": 0.0,
+      "error": "timeout: HTTP Error 408: Timeout\nTraceback (most recent call last):\n  File \"C:\\Users\\patil\\agentic-graphrag\\eval\\run_public_final.py\", line 354, in run_one\n    return RUNNERS[pipeline](question)\n           ~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"C:\\Users\\patil\\agentic-graphrag\\eval\\run_public_final.py\", line 291, in run_agentic\n    raw = investigate(question)\n  File \"C:\\Users\\patil\\agentic-graphrag\\agent\\orchestrator.py\", line 1556, in investigate\n    result = call_tool(decision[\"tool\"], **decision[\"args\"])\n  File \"C:\\Users\\patil\\agentic-graphrag\\agent\\tools.py\", line 381, in call_tool\n    return fn(**kwargs)\nurllib.error.HTTPError: HTTP Error 408: Timeout\n",
+      "latency_sec": 1232.99
+    },
+    {
+      "qid": "pub-095",
+      "qtype": "multi_hop",
+      "predicted_answer": "Pamela Jelimo",
+      "gold_answer": [
+        "Valerie Vili"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 38.38
+    },
+    {
+      "qid": "pub-098",
+      "qtype": "multi_hop",
+      "predicted_answer": "Isabel Fernández",
+      "gold_answer": [
+        "Bekzat Sattarkhanov"
+      ],
+      "gold_doc_retrieved": true,
+      "retrieval_completeness": 1.0,
+      "error": null,
+      "latency_sec": 4.58
+    }
+  ]
+}

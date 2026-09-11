@@ -1,0 +1,24 @@
+data/
+venv/
+.venv/
+*.pyc
+*~
+*.swp
+.env
+__pycache__/
+# Ignore generated files
+*.log
+*.tmp
+*.bak
+*.zip
+*.tar.gz
+*.egg-info/
+# Ignore test files
+*.test
+# Ignore output files
+*.out
+*.err
+# Ignore leftover eval/results files; keep official frozen runs.
+eval/results/*
+!eval/results/final_public_benchmark/
+!eval/results/hidden_benchmark/
